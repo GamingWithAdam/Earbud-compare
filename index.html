@@ -1,39 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Earbud Comparator</title>
-    
-    <!-- Google Font for a modern look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
 
     <!-- This div is the canvas for our particle background -->
     <div id="particles-js"></div>
 
+    <!-- NEW: Hamburger Menu Button (Top Left) -->
+    <button id="menu-toggle-button" class="menu-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+    </button>
+
+    <!-- NEW: Settings Menu (Hidden by default) -->
+    <nav id="settings-menu" class="settings-menu">
+        <h3 data-lang="settingsTitle">Settings</h3>
+        <div class="setting-item">
+            <label for="country-selector" data-lang="countryLabel">Country / Region</label>
+            <select id="country-selector">
+                <option value="US">United States</option>
+                <option value="GB">United Kingdom</option>
+                <option value="DE">Germany</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+            </select>
+        </div>
+        <div class="setting-item">
+            <label for="language-selector" data-lang="languageLabel">Language</label>
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+    </nav>
+
+
     <div class="content-wrapper">
         <header>
-            <h1>Find Your Perfect Earbuds</h1>
-            <p class="subtitle">Select up to two products below to compare specs and prices.</p>
+            <h1 data-lang="mainTitle">Find Your Perfect Earbuds</h1>
+            <p class="subtitle" data-lang="subtitle">Select up to two products below to compare specs and prices.</p>
         </header>
 
-        <!-- The main grid where comparison cards will be displayed -->
         <div id="comparison-grid" class="comparison-grid">
             <!-- JavaScript will generate the content here -->
         </div>
     </div>
 
-    <!-- The Modal for selecting a product (hidden by default) -->
     <div id="product-modal" class="modal-overlay">
         <div class="modal-content">
             <button id="close-modal" class="close-button">&times;</button>
-            <h2>Select an Earbud</h2>
+            <h2 data-lang="modalTitle">Select an Earbud</h2>
             <input type="search" id="search-bar" placeholder="Search for Sony, Anker, Bose...">
             <ul id="product-list" class="product-list-modal">
                 <!-- JavaScript will populate this list -->
@@ -41,10 +53,6 @@
         </div>
     </div>
 
-    <!-- The Particle.js library script -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.43.1/tsparticles.min.js"></script>
-    
-    <!-- Your application script -->
     <script src="app.js"></script>
 </body>
-</html>

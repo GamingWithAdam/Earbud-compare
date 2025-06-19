@@ -34,6 +34,7 @@ body {
 header {
     text-align: center;
     margin-bottom: 3rem;
+    padding-top: 60px; /* Add space so content isn't under the fixed menu button */
 }
 
 h1 {
@@ -99,6 +100,7 @@ h1 {
     position: absolute; top: 15px; right: 15px; background: #333;
     border: none; border-radius: 50%; width: 30px; height: 30px;
     cursor: pointer; font-weight: bold; color: #fff; font-size: 1.2rem;
+    display: flex; justify-content: center; align-items: center;
     transition: background-color 0.2s;
 }
 .remove-button:hover { background: #ff4d4d; }
@@ -155,4 +157,76 @@ h1 {
 .product-list-modal img { width: 40px; height: 40px; }
 .product-list-modal .disabled {
     opacity: 0.4; cursor: not-allowed; background-color: #252525;
+}
+
+/* --- Settings Menu Styles --- */
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001; /* Must be above the settings menu */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s;
+}
+
+.menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.settings-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #181818;
+    z-index: 1000;
+    padding: 80px 25px 25px 25px; /* Add padding at top to not overlap button */
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%); /* Hidden by default */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.settings-menu.open {
+    transform: translateX(0); /* Slides the menu in */
+}
+
+.settings-menu h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    border-bottom: 1px solid #444;
+    padding-bottom: 1rem;
+}
+
+.setting-item {
+    margin-bottom: 1.5rem;
+}
+
+.setting-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.setting-item select {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
 }
