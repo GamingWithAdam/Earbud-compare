@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- THIS IS THE NEW TITLE -->
     <title>Buds Compare</title>
+    
+    <!-- THIS IS THE NEW ICON (FAVICON) LINK -->
+    <link rel="icon" type="image/png" href="https://imgur.com/a/iz1HwUm">
+
+    <!-- Google Font for a modern look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet Link (Unchanged) -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -38,7 +47,6 @@
         </header>
         <div id="comparison-grid" class="comparison-grid"></div>
 
-        <!-- NEW: Full Market Comparison Chart Section -->
         <section class="chart-container">
             <div class="chart-header">
                 <h2>Full Market Comparison</h2>
@@ -62,7 +70,7 @@
 
     <div id="product-modal" class="modal-overlay">
         <div class="modal-content">
-            <button id="close-modal" class="close-button">&times;</button>
+            <button id="close-modal" class="close-button">×</button>
             <h2 data-lang="modalTitle">Select an Earbud</h2>
             <input type="search" id="search-bar" placeholder="Search for Sony, Anker, Bose...">
             <ul id="product-list" class="product-list-modal"></ul>
