@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Earbud Comparator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Choose Your Earbuds to Compare</h1>
+
+    <!-- The main grid where comparison cards will be displayed -->
+    <div id="comparison-grid" class="comparison-grid">
+        <!-- JavaScript will generate the content here -->
+    </div>
+
+    <!-- The Modal for selecting a product (hidden by default) -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-button">&times;</button>
+            <h2>Select an Earbud</h2>
+            <input type="search" id="search-bar" placeholder="Search for earbuds...">
+            <ul id="product-list" class="product-list-modal">
+                <!-- JavaScript will populate this list -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
