@@ -3,620 +3,330 @@
         "id": 1,
         "name": "Apple AirPods Pro 2",
         "image": "https://i.imgur.com/G20gD9y.png",
-        "specs": {
-            "Noise Cancellation": "Excellent",
-            "Battery (Buds)": "6 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Spatial Audio"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 249,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Best Buy",
-                "price": 249,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Excellent", "Battery (Buds)": "6 hours", "Water Resistance": "IPX4", "Key Feature": "Spatial Audio" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 249, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 229, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 279, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 2,
         "name": "Sony WF-1000XM5",
         "image": "https://i.imgur.com/EDVot5S.png",
-        "specs": {
-            "Noise Cancellation": "Best-in-class",
-            "Battery (Buds)": "8 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Hi-Res Audio"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 299,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "B&H",
-                "price": 298,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Best-in-class", "Battery (Buds)": "8 hours", "Water Resistance": "IPX4", "Key Feature": "Hi-Res Audio" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 299, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 259, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 299, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 3,
         "name": "Bose QuietComfort Ultra",
         "image": "https://i.imgur.com/UfJ4wT0.png",
-        "specs": {
-            "Noise Cancellation": "Top-Tier",
-            "Battery (Buds)": "6 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Immersive Audio"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 299,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Bose",
-                "price": 299,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Top-Tier", "Battery (Buds)": "6 hours", "Water Resistance": "IPX4", "Key Feature": "Immersive Audio" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 299, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 289, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 319, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 4,
         "name": "Sennheiser Momentum 3",
         "image": "https://i.imgur.com/5uR3T3r.png",
-        "specs": {
-            "Noise Cancellation": "Very Good",
-            "Battery (Buds)": "7 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Signature Sound"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 245,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Walmart",
-                "price": 250,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Very Good", "Battery (Buds)": "7 hours", "Water Resistance": "IPX4", "Key Feature": "Signature Sound" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 245, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 220, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 249, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 5,
         "name": "Anker Soundcore A40",
         "image": "https://i.imgur.com/7YfEwql.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "10 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Amazing Battery"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 79,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Anker",
-                "price": 99,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "10 hours", "Water Resistance": "IPX4", "Key Feature": "Amazing Battery" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 79, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 65, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 69, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 65, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 75, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 65, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ]
+        }
     },
     {
         "id": 6,
         "name": "Beats Fit Pro",
         "image": "https://i.imgur.com/J3T1i0A.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "6 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Secure Wingtips"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 199,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Apple",
-                "price": 199,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "6 hours", "Water Resistance": "IPX4", "Key Feature": "Secure Wingtips" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 199, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 219, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 7,
         "name": "Samsung Galaxy Buds2 Pro",
         "image": "https://i.imgur.com/rL7tY8R.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "5 hours",
-            "Water Resistance": "IPX7",
-            "Key Feature": "Seamless Samsung Eco"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 179,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Samsung",
-                "price": 229,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "5 hours", "Water Resistance": "IPX7", "Key Feature": "Seamless Samsung Eco" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 179, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 169, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 185, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 8,
         "name": "Google Pixel Buds Pro",
         "image": "https://i.imgur.com/sS4fBwB.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "7 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Google Assistant"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 199,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Google Store",
-                "price": 199,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "7 hours", "Water Resistance": "IPX4", "Key Feature": "Google Assistant" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 179, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 199, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 9,
         "name": "Jabra Elite 10",
         "image": "https://i.imgur.com/vH9J0yT.png",
-        "specs": {
-            "Noise Cancellation": "Very Good",
-            "Battery (Buds)": "6 hours",
-            "Water Resistance": "IP57",
-            "Key Feature": "Dolby Atmos"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 249,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Jabra",
-                "price": 249,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Very Good", "Battery (Buds)": "6 hours", "Water Resistance": "IP57", "Key Feature": "Dolby Atmos" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 249, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 229, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 249, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 10,
         "name": "EarFun Air Pro 3",
         "image": "https://i.imgur.com/4q2O5yC.png",
-        "specs": {
-            "Noise Cancellation": "Decent",
-            "Battery (Buds)": "7 hours",
-            "Water Resistance": "IPX5",
-            "Key Feature": "Value for Money"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 69,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Decent", "Battery (Buds)": "7 hours", "Water Resistance": "IPX5", "Key Feature": "Value for Money" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 69, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 55, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 60, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 55, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 65, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 55, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ]
+        }
     },
     {
         "id": 11,
         "name": "JLab Epic Air Sport ANC",
         "image": "https://i.imgur.com/9wN1yG9.png",
-        "specs": {
-            "Noise Cancellation": "Okay",
-            "Battery (Buds)": "15 hours",
-            "Water Resistance": "IP66",
-            "Key Feature": "Workout Hooks"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 99,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "JLab",
-                "price": 99,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Okay", "Battery (Buds)": "15 hours", "Water Resistance": "IP66", "Key Feature": "Workout Hooks" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 89, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 99, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 12,
         "name": "Nothing Ear (2)",
         "image": "https://i.imgur.com/f0B2W5f.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "4 hours",
-            "Water Resistance": "IP54",
-            "Key Feature": "Unique Design"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 149,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Nothing",
-                "price": 149,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "4 hours", "Water Resistance": "IP54", "Key Feature": "Unique Design" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 149, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 129, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 149, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 13,
         "name": "Anker Soundcore P3i",
         "image": "https://i.imgur.com/f1zXz9k.png",
-        "specs": {
-            "Noise Cancellation": "Okay",
-            "Battery (Buds)": "9 hours",
-            "Water Resistance": "IPX5",
-            "Key Feature": "Budget King"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 49,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Okay", "Battery (Buds)": "9 hours", "Water Resistance": "IPX5", "Key Feature": "Budget King" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 49, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 35, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 40, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 35, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 45, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 35, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ]
+        }
     },
     {
         "id": 14,
         "name": "Apple AirPods (3rd Gen)",
         "image": "https://i.imgur.com/d9jY3hW.png",
-        "specs": {
-            "Noise Cancellation": "None",
-            "Battery (Buds)": "6 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Apple Ecosystem"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 169,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Best Buy",
-                "price": 169,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "None", "Battery (Buds)": "6 hours", "Water Resistance": "IPX4", "Key Feature": "Apple Ecosystem" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 169, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 159, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 179, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 15,
         "name": "Jabra Elite 4 Active",
         "image": "https://i.imgur.com/2b7J9Vp.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "7 hours",
-            "Water Resistance": "IP57",
-            "Key Feature": "Great for Calls"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 89,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Walmart",
-                "price": 95,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "7 hours", "Water Resistance": "IP57", "Key Feature": "Great for Calls" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 89, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 79, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 85, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 16,
         "name": "TOZO T6",
         "image": "https://i.imgur.com/3Z6H4XQ.png",
-        "specs": {
-            "Noise Cancellation": "None",
-            "Battery (Buds)": "6 hours",
-            "Water Resistance": "IPX8",
-            "Key Feature": "Ultra Budget"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 26,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "None", "Battery (Buds)": "6 hours", "Water Resistance": "IPX8", "Key Feature": "Ultra Budget" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 26, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 18, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 22, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 18, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 25, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 18, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ]
+        }
     },
     {
         "id": 17,
         "name": "Beats Studio Buds +",
         "image": "https://i.imgur.com/T0bS1m5.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "9 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Transparent Design"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 169,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Apple",
-                "price": 169,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "9 hours", "Water Resistance": "IPX4", "Key Feature": "Transparent Design" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 169, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 179, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 189, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 18,
         "name": "Technics EAH-AZ80",
         "image": "https://i.imgur.com/pB3D0vV.png",
-        "specs": {
-            "Noise Cancellation": "Excellent",
-            "Battery (Buds)": "7 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "3-Device Multipoint"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 299,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Excellent", "Battery (Buds)": "7 hours", "Water Resistance": "IPX4", "Key Feature": "3-Device Multipoint" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 299, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 259, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 299, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 19,
         "name": "Anker Soundcore Liberty 4 NC",
         "image": "https://i.imgur.com/vI2c2Lq.png",
-        "specs": {
-            "Noise Cancellation": "Very Good",
-            "Battery (Buds)": "10 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Adaptive ANC 2.0"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 99,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Very Good", "Battery (Buds)": "10 hours", "Water Resistance": "IPX4", "Key Feature": "Adaptive ANC 2.0" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 75, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 80, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 75, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 89, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 75, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ]
+        }
     },
     {
         "id": 20,
         "name": "Final Audio ZE8000",
         "image": "https://i.imgur.com/fL5K2jE.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "5 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "8K Sound"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 349,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "5 hours", "Water Resistance": "IPX4", "Key Feature": "8K Sound" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 349, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 299, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 329, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 21,
         "name": "Shure SE215",
         "image": "https://i.imgur.com/dK7Y6gT.png",
-        "specs": {
-            "Noise Cancellation": "Isolation (Pro)",
-            "Battery (Buds)": "8 hours",
-            "Water Resistance": "Sweat",
-            "Key Feature": "Pro Audio Heritage"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 99,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Isolation (Pro)", "Battery (Buds)": "8 hours", "Water Resistance": "Sweat", "Key Feature": "Pro Audio Heritage" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 85, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 99, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 22,
         "name": "Razer Hammerhead Pro",
         "image": "https://i.imgur.com/9nF8YyL.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "4.5 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Low-Latency Gaming"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 199,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Razer",
-                "price": 199,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "4.5 hours", "Water Resistance": "IPX4", "Key Feature": "Low-Latency Gaming" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 169, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 179, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 23,
         "name": "Audio-Technica ATH-TWX9",
         "image": "https://i.imgur.com/Q2h3o3p.png",
-        "specs": {
-            "Noise Cancellation": "Very Good",
-            "Battery (Buds)": "6 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Deep UV Sterilization"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 299,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Very Good", "Battery (Buds)": "6 hours", "Water Resistance": "IPX4", "Key Feature": "Deep UV Sterilization" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 299, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 279, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 319, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 24,
         "name": "Sony WF-C700N",
         "image": "https://i.imgur.com/yF5f9rR.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "7.5 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Sony Sound on a Budget"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 118,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "7.5 hours", "Water Resistance": "IPX4", "Key Feature": "Sony Sound on a Budget" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 118, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 99, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 109, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 25,
         "name": "1MORE Evo",
         "image": "https://i.imgur.com/7b8k9lM.png",
-        "specs": {
-            "Noise Cancellation": "Very Good",
-            "Battery (Buds)": "5.5 hours",
-            "Water Resistance": "IPX4",
-            "Key Feature": "Dual-Driver Design"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 169,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Very Good", "Battery (Buds)": "5.5 hours", "Water Resistance": "IPX4", "Key Feature": "Dual-Driver Design" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 169, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 120, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 159, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 120, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 169, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 120, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ]
+        }
     },
     {
         "id": 26,
         "name": "Bowers & Wilkins Pi7 S2",
         "image": "https://i.imgur.com/2m6N8iJ.png",
-        "specs": {
-            "Noise Cancellation": "Excellent",
-            "Battery (Buds)": "5 hours",
-            "Water Resistance": "IP54",
-            "Key Feature": "Audiophile Grade"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 399,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Excellent", "Battery (Buds)": "5 hours", "Water Resistance": "IP54", "Key Feature": "Audiophile Grade" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 399, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 349, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 399, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 27,
         "name": "EarFun Free Pro 2",
         "image": "https://i.imgur.com/sW3o4rK.png",
-        "specs": {
-            "Noise Cancellation": "Decent",
-            "Battery (Buds)": "6 hours",
-            "Water Resistance": "IPX5",
-            "Key Feature": "Tiny & Lightweight"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 79,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Decent", "Battery (Buds)": "6 hours", "Water Resistance": "IPX5", "Key Feature": "Tiny & Lightweight" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 79, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 60, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 65, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 60, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 70, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" }, { "store": "AliExpress (Global)", "price": 60, "currency": "$ (USD)", "link": "#YOUR_ALIEXPRESS_LINK" } ]
+        }
     },
     {
         "id": 28,
         "name": "Master & Dynamic MW08 Sport",
         "image": "https://i.imgur.com/N5W9Y8o.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "10 hours",
-            "Water Resistance": "IPX5",
-            "Key Feature": "Luxury Materials"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 349,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "10 hours", "Water Resistance": "IPX5", "Key Feature": "Luxury Materials" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 349, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 329, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 349, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 29,
         "name": "Samsung Galaxy Buds FE",
         "image": "https://i.imgur.com/uX8y7Gz.png",
-        "specs": {
-            "Noise Cancellation": "Good",
-            "Battery (Buds)": "6 hours",
-            "Water Resistance": "IPX2",
-            "Key Feature": "Best Value Samsung"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 99,
-                "link": "#YOUR_AFFILIATE_LINK"
-            },
-            {
-                "store": "Samsung",
-                "price": 99,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "Good", "Battery (Buds)": "6 hours", "Water Resistance": "IPX2", "Key Feature": "Best Value Samsung" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 99, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 109, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     },
     {
         "id": 30,
         "name": "Cambridge Audio Melomania 1+",
         "image": "https://i.imgur.com/c6x7y8A.png",
-        "specs": {
-            "Noise Cancellation": "None",
-            "Battery (Buds)": "9 hours",
-            "Water Resistance": "IPX5",
-            "Key Feature": "Pure, British Sound"
-        },
-        "prices": [
-            {
-                "store": "Amazon",
-                "price": 59,
-                "link": "#YOUR_AFFILIATE_LINK"
-            }
-        ]
+        "specs": { "Noise Cancellation": "None", "Battery (Buds)": "9 hours", "Water Resistance": "IPX5", "Key Feature": "Pure, British Sound" },
+        "regionalPrices": {
+            "US": [ { "store": "Amazon US", "price": 59, "currency": "$", "link": "#YOUR_US_AFFILIATE_LINK" } ],
+            "GB": [ { "store": "Amazon UK", "price": 49, "currency": "£", "link": "#YOUR_UK_AFFILIATE_LINK" } ],
+            "DE": [ { "store": "Amazon DE", "price": 55, "currency": "€", "link": "#YOUR_DE_AFFILIATE_LINK" } ]
+        }
     }
 ]

@@ -2,6 +2,7 @@
 let allEarbuds = []; 
 let selectedProducts = [null, null];
 let activeSlotIndex = null;
+let userRegion = 'US'; // Default region if detection fails
 
 // --- DOM ELEMENTS ---
 const comparisonGrid = document.getElementById('comparison-grid');
@@ -10,113 +11,72 @@ const closeModalButton = document.getElementById('close-modal');
 const productList = document.getElementById('product-list');
 const searchBar = document.getElementById('search-bar');
 
-// --- ASYNCHRONOUS DATA LOADING ---
+// --- ASYNCHRONOUS INITIALIZATION ---
 
 /**
- * Fetches data, initializes the particle background, and starts the app.
+ * Main function to start the application.
+ * It detects the user's region, then fetches product data, then renders the page.
  */
 async function initializeApp() {
-    // Start the particle background immediately
     loadParticleBackground();
-
     try {
+        userRegion = await getUserRegion();
+        console.log(`User region detected: ${userRegion}`);
+        
         const response = await fetch('./earbuds.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        
         allEarbuds = await response.json();
-        // Once data is loaded, render the initial empty grid.
         renderGrid(); 
     } catch (error) {
-        console.error("Could not load earbud data:", error);
+        console.error("Could not initialize app:", error);
         comparisonGrid.innerHTML = `<p style="text-align: center; color: #ff4d4d; font-size: 1.2rem;">Error: Could not load product data. Please try again later.</p>`;
     }
 }
 
 /**
- * Loads and configures the tsParticles background effect.
+ * Uses a free Geolocation API to detect the user's country code.
+ * @returns {Promise<string>} The user's two-letter country code (e.g., 'US', 'GB').
  */
-function loadParticleBackground() {
-    tsParticles.load("particles-js", {
-        fpsLimit: 60,
-        interactivity: {
-            events: {
-                onHover: {
-                    enable: true,
-                    mode: "repulse",
-                },
-                resize: true,
-            },
-            modes: {
-                repulse: {
-                    distance: 100,
-                    duration: 0.4,
-                },
-            },
-        },
-        particles: {
-            color: {
-                value: "#555",
-            },
-            links: {
-                color: "#555",
-                distance: 150,
-                enable: true,
-                opacity: 0.2,
-                width: 1,
-            },
-            collisions: {
-                enable: true,
-            },
-            move: {
-                direction: "none",
-                enable: true,
-                outMode: "bounce",
-                random: false,
-                speed: 1,
-                straight: false,
-            },
-            number: {
-                density: {
-                    enable: true,
-                    area: 800,
-                },
-                value: 80,
-            },
-            opacity: {
-                value: 0.2,
-            },
-            shape: {
-                type: "circle",
-            },
-            size: {
-                random: true,
-                value: 3,
-            },
-        },
-        detectRetina: true,
-    });
+async function getUserRegion() {
+    try {
+        // We use ip-api.com which is free and requires no key for our use case.
+        const response = await fetch('http://ip-api.com/json/?fields=countryCode');
+        if (!response.ok) throw new Error('Region detection failed');
+        const data = await response.json();
+        // Return the country code (e.g., "US", "GB") or default to 'US'
+        return data.countryCode || 'US'; 
+    } catch (error) {
+        console.warn("Could not detect user region. Defaulting to 'US'.", error);
+        return 'US'; // Fallback to US if API fails
+    }
 }
 
-// --- CORE RENDERING & LOGIC FUNCTIONS (Unchanged from before) ---
+// --- CORE RENDERING & LOGIC FUNCTIONS ---
 
-function renderGrid() {
-    comparisonGrid.innerHTML = '';
-    selectedProducts.forEach((product, index) => {
-        let cardHTML = product ? createProductCardHTML(product, index) : createPlaceholderCardHTML(index);
-        comparisonGrid.innerHTML += cardHTML;
-    });
-    addEventListenersToCards();
-}
-
+/**
+ * Creates HTML for a card showing a selected product.
+ * THIS FUNCTION IS NOW REGION-AWARE.
+ */
 function createProductCardHTML(product, index) {
-    product.prices.sort((a, b) => a.price - b.price);
+    // Get prices for the user's region, or fallback to US prices if the region is not available.
+    let regionalPrices = product.regionalPrices[userRegion] || product.regionalPrices['US'];
+    
+    // If even US prices aren't available, show a message.
+    if (!regionalPrices || regionalPrices.length === 0) {
+        return `<p>No pricing information available for your region.</p>`;
+    }
+
+    // Sort prices from low to high
+    regionalPrices.sort((a, b) => a.price - b.price);
+
     const specsHTML = Object.entries(product.specs).map(([key, value]) =>
         `<li><span class="spec-label">${key}</span> <span>${value}</span></li>`
     ).join('');
-    const pricesHTML = product.prices.map(p => `
+        
+    const pricesHTML = regionalPrices.map(p => `
         <div class="price-item">
-            <span>${p.store}: <strong>$${p.price}</strong></span>
+            <span>${p.store}: <strong>${p.currency}${p.price}</strong></span>
             <a href="${p.link}" target="_blank" class="buy-button">Buy</a>
         </div>
     `).join('');
@@ -134,76 +94,19 @@ function createProductCardHTML(product, index) {
     `;
 }
 
-function createPlaceholderCardHTML(index) {
-    return `
-        <div class="placeholder-card" data-index="${index}">
-            <span class="add-button">+ Compare</span>
-        </div>
-    `;
-}
 
-function addEventListenersToCards() {
-    document.querySelectorAll('.placeholder-card').forEach(card => {
-        card.addEventListener('click', () => openModal(card.dataset.index));
-    });
-    document.querySelectorAll('.remove-button').forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevents card click event from firing
-            removeProduct(button.dataset.index);
-        });
-    });
-}
+// --- UNCHANGED FUNCTIONS (You can copy these from your existing app.js) ---
+function loadParticleBackground(){tsParticles.load("particles-js",{fpsLimit:60,interactivity:{events:{onHover:{enable:!0,mode:"repulse"},resize:!0},modes:{repulse:{distance:100,duration:.4}}},particles:{color:{value:"#555"},links:{color:"#555",distance:150,enable:!0,opacity:.2,width:1},collisions:{enable:!0},move:{direction:"none",enable:!0,outMode:"bounce",random:!1,speed:1,straight:!1},number:{density:{enable:!0,area:800},value:80},opacity:{value:.2},shape:{type:"circle"},size:{random:!0,value:3}},detectRetina:!0})};
+function renderGrid(){comparisonGrid.innerHTML="",selectedProducts.forEach((e,t)=>{let o;o=e?createProductCardHTML(e,t):createPlaceholderCardHTML(t),comparisonGrid.innerHTML+=o}),addEventListenersToCards()};
+function createPlaceholderCardHTML(e){return`\n        <div class="placeholder-card" data-index="${e}">\n            <span class="add-button">+ Compare</span>\n        </div>\n    `};
+function addEventListenersToCards(){document.querySelectorAll(".placeholder-card").forEach(e=>{e.addEventListener("click",()=>openModal(e.dataset.index))}),document.querySelectorAll(".remove-button").forEach(e=>{e.addEventListener("click",t=>{t.stopPropagation(),removeProduct(e.dataset.index)})})};
+function openModal(e){activeSlotIndex=parseInt(e),populateModalList(),modal.style.display="flex",searchBar.focus()};
+function closeModal(){modal.style.display="none",searchBar.value=""};
+function populateModalList(e=""){productList.innerHTML="";const t=selectedProducts.filter(e=>e).map(e=>e.id),o=allEarbuds.filter(t=>t.name.toLowerCase().includes(e.toLowerCase()));o.forEach(e=>{const o=document.createElement("li"),n=t.includes(e.id);o.innerHTML=`<img src="${e.image}" alt=""> <span>${e.name}</span>`,n?o.classList.add("disabled"):o.addEventListener("click",()=>selectProduct(e.id)),productList.appendChild(o)})};
+function selectProduct(e){const t=allEarbuds.find(t=>t.id===parseInt(e));selectedProducts[activeSlotIndex]=t,closeModal(),renderGrid()};
+function removeProduct(e){selectedProducts[e]=null,renderGrid()};
+closeModalButton.addEventListener("click",closeModal),modal.addEventListener("click",e=>{e.target===modal&&closeModal()}),searchBar.addEventListener("input",e=>populateModalList(e.target.value));
 
-function openModal(index) {
-    activeSlotIndex = parseInt(index);
-    populateModalList();
-    modal.style.display = 'flex';
-    searchBar.focus();
-}
 
-function closeModal() {
-    modal.style.display = 'none';
-    searchBar.value = '';
-}
-
-function populateModalList(searchTerm = '') {
-    productList.innerHTML = '';
-    const selectedIds = selectedProducts.filter(p => p).map(p => p.id);
-    const filteredData = allEarbuds.filter(p =>
-        p.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
-    filteredData.forEach(product => {
-        const li = document.createElement('li');
-        const isSelected = selectedIds.includes(product.id);
-        li.innerHTML = `<img src="${product.image}" alt=""> <span>${product.name}</span>`;
-        if (isSelected) {
-            li.classList.add('disabled');
-        } else {
-            li.addEventListener('click', () => selectProduct(product.id));
-        }
-        productList.appendChild(li);
-    });
-}
-
-function selectProduct(productId) {
-    const product = allEarbuds.find(p => p.id === parseInt(productId));
-    selectedProducts[activeSlotIndex] = product;
-    closeModal();
-    renderGrid();
-}
-
-function removeProduct(index) {
-    selectedProducts[index] = null;
-    renderGrid();
-}
-
-// --- EVENT LISTENERS & INITIALIZATION ---
-closeModalButton.addEventListener('click', closeModal);
-modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-});
-searchBar.addEventListener('input', (e) => populateModalList(e.target.value));
-
-// Start the application.
+// Start the application!
 initializeApp();
