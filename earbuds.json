@@ -364,5 +364,59 @@
         "specs": { "Noise Cancellation": "Good", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX5" },
         "scores": { "anc_score": 3.5, "sound_score": 3.7, "app_score": 1, "ip_rating": 5, "price": 89 },
         "regionalPrices": { "US": [ { "store": "Amazon US", "price": 89, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 79, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 62, "name": "Apple AirPods Max", "image": "https://i.imgur.com/R3SoA5C.png",
+        "specs": { "Noise Cancellation": "Excellent", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 4.6, "sound_score": 4.4, "app_score": 1, "ip_rating": 0, "price": 549 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 549, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 499, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 63, "name": "1MORE ComfoBuds Mini", "image": "https://i.imgur.com/vH9J0yT.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 3.5, "sound_score": 3.8, "app_score": 1, "ip_rating": 5, "price": 99 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 89, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 64, "name": "1MORE PistonBuds Pro", "image": "https://i.imgur.com/7b8k9lM.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 3.2, "sound_score": 3.6, "app_score": 1, "ip_rating": 5, "price": 69 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 69, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 59, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 65, "name": "1MORE Aero", "image": "https://i.imgur.com/sW3o4rK.png",
+        "specs": { "Noise Cancellation": "Very Good", "Sound": "Great", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 3.8, "sound_score": 4, "app_score": 1, "ip_rating": 5, "price": 109 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 109, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 99, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 66, "name": "QCY T13", "image": "https://i.imgur.com/uX8y7Gz.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 0, "sound_score": 2.8, "app_score": 1, "ip_rating": 5, "price": 25 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 25, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 22, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 67, "name": "QCY HT05 MeloBuds ANC", "image": "https://i.imgur.com/c6x7y8A.png",
+        "specs": { "Noise Cancellation": "Very Good", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 3.5, "sound_score": 3.2, "app_score": 1, "ip_rating": 5, "price": 40 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 40, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 35, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 68, "name": "QCY T18 MeloBuds", "image": "https://i.imgur.com/TqGZ4QJ.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 0, "sound_score": 2.9, "app_score": 1, "ip_rating": 5, "price": 30 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 30, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 28, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 69, "name": "QCY T20 AilyPods", "image": "https://i.imgur.com/5XhN4m4.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Decent", "App Support": "Yes", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 0, "sound_score": 2.7, "app_score": 1, "ip_rating": 4, "price": 28 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 28, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 25, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 70, "name": "QCY HT07 Arcbuds", "image": "https://i.imgur.com/O6tFz4T.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 3.2, "sound_score": 3.1, "app_score": 1, "ip_rating": 5, "price": 35 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 35, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 30, "currency": "£", "link": "#" } ] }
     }
 ]
