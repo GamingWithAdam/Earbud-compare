@@ -1,14 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Earbud Comparator</title>
+    
+    <!-- Google Font for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- THIS IS THE CRUCIAL LINK THAT WAS MISSING -->
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
     <!-- This div is the canvas for our particle background -->
     <div id="particles-js"></div>
 
-    <!-- NEW: Hamburger Menu Button (Top Left) -->
+    <!-- Hamburger Menu Button (Top Left) -->
     <button id="menu-toggle-button" class="menu-toggle">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
     </button>
 
-    <!-- NEW: Settings Menu (Hidden by default) -->
+    <!-- Settings Menu (Hidden by default) -->
     <nav id="settings-menu" class="settings-menu">
         <h3 data-lang="settingsTitle">Settings</h3>
         <div class="setting-item">
@@ -53,6 +68,10 @@
         </div>
     </div>
 
+    <!-- The Particle.js library script -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.43.1/tsparticles.min.js"></script>
+    
+    <!-- Your application script -->
     <script src="app.js"></script>
 </body>
+</html>
