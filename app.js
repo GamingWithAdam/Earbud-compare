@@ -41,7 +41,7 @@ async function initializeApp() {
 async function getUserRegion() {
     try {
         // We use ip-api.com which is free and requires no key for our use case.
-        const response = await fetch('http://ip-api.com/json/?fields=countryCode');
+        const response = await fetch('https://ip-api.com/json/?fields=countryCode');
         if (!response.ok) throw new Error('Region detection failed');
         const data = await response.json();
         // Return the country code (e.g., "US", "GB") or default to 'US'
