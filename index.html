@@ -4,57 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Earbud Comparator</title>
-    
-    <!-- Google Font for a modern look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- THIS IS THE CRUCIAL LINK THAT WAS MISSING -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- This div is the canvas for our particle background -->
     <div id="particles-js"></div>
-
-    <!-- Hamburger Menu Button (Top Left) -->
     <button id="menu-toggle-button" class="menu-toggle">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
     </button>
-
-    <!-- Settings Menu (Hidden by default) -->
     <nav id="settings-menu" class="settings-menu">
         <h3 data-lang="settingsTitle">Settings</h3>
         <div class="setting-item">
             <label for="country-selector" data-lang="countryLabel">Country / Region</label>
             <select id="country-selector">
-                <option value="US">United States</option>
-                <option value="GB">United Kingdom</option>
-                <option value="DE">Germany</option>
-                <option value="CA">Canada</option>
-                <option value="AU">Australia</option>
+                <option value="US">United States</option><option value="GB">United Kingdom</option><option value="DE">Germany</option><option value="CA">Canada</option><option value="AU">Australia</option>
             </select>
         </div>
         <div class="setting-item">
             <label for="language-selector" data-lang="languageLabel">Language</label>
             <select id="language-selector">
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
+                <option value="en">English</option><option value="de">Deutsch</option>
             </select>
         </div>
     </nav>
-
 
     <div class="content-wrapper">
         <header>
             <h1 data-lang="mainTitle">Find Your Perfect Earbuds</h1>
             <p class="subtitle" data-lang="subtitle">Select up to two products below to compare specs and prices.</p>
         </header>
+        <div id="comparison-grid" class="comparison-grid"></div>
 
-        <div id="comparison-grid" class="comparison-grid">
-            <!-- JavaScript will generate the content here -->
-        </div>
+        <!-- NEW: Full Market Comparison Chart Section -->
+        <section class="chart-container">
+            <div class="chart-header">
+                <h2>Full Market Comparison</h2>
+                <div class="chart-selector-wrapper">
+                    <label for="chart-category-selector">Compare by:</label>
+                    <select id="chart-category-selector">
+                        <option value="price">Price (USD)</option>
+                        <option value="anc_score">Noise Cancellation</option>
+                        <option value="sound_score">Sound Quality</option>
+                        <option value="ip_rating">Water Resistance (IPX rating)</option>
+                        <option value="app_score">App Support</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chart-canvas-container">
+                <canvas id="comparisonChart"></canvas>
+            </div>
+        </section>
+        
     </div>
 
     <div id="product-modal" class="modal-overlay">
@@ -62,16 +65,13 @@
             <button id="close-modal" class="close-button">&times;</button>
             <h2 data-lang="modalTitle">Select an Earbud</h2>
             <input type="search" id="search-bar" placeholder="Search for Sony, Anker, Bose...">
-            <ul id="product-list" class="product-list-modal">
-                <!-- JavaScript will populate this list -->
-            </ul>
+            <ul id="product-list" class="product-list-modal"></ul>
         </div>
     </div>
 
-    <!-- The Particle.js library script -->
+    <!-- Script loading section -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.43.1/tsparticles.min.js"></script>
-    
-    <!-- Your application script -->
     <script src="app.js"></script>
 </body>
 </html>
