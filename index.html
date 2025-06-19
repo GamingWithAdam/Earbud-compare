@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Earbud Comparator</title>
+    
+    <!-- Google Font for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Choose Your Earbuds to Compare</h1>
+    <!-- This div is the canvas for our particle background -->
+    <div id="particles-js"></div>
 
-    <!-- The main grid where comparison cards will be displayed -->
-    <div id="comparison-grid" class="comparison-grid">
-        <!-- JavaScript will generate the content here -->
+    <div class="content-wrapper">
+        <header>
+            <h1>Find Your Perfect Earbuds</h1>
+            <p class="subtitle">Select up to two products below to compare specs and prices.</p>
+        </header>
+
+        <!-- The main grid where comparison cards will be displayed -->
+        <div id="comparison-grid" class="comparison-grid">
+            <!-- JavaScript will generate the content here -->
+        </div>
     </div>
 
     <!-- The Modal for selecting a product (hidden by default) -->
@@ -20,13 +34,17 @@
         <div class="modal-content">
             <button id="close-modal" class="close-button">&times;</button>
             <h2>Select an Earbud</h2>
-            <input type="search" id="search-bar" placeholder="Search for earbuds...">
+            <input type="search" id="search-bar" placeholder="Search for Sony, Anker, Bose...">
             <ul id="product-list" class="product-list-modal">
                 <!-- JavaScript will populate this list -->
             </ul>
         </div>
     </div>
 
+    <!-- The Particle.js library script -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.43.1/tsparticles.min.js"></script>
+    
+    <!-- Your application script -->
     <script src="app.js"></script>
 </body>
 </html>

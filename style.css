@@ -1,104 +1,158 @@
-/* --- Basic Setup --- */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #f0f2f5;
+/* --- Global Reset & Dark Theme --- */
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1 { text-align: center; color: #1c1e21; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* --- Particle Background Canvas --- */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Puts it behind all other content */
+}
+
+/* --- Main Content Layout --- */
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+}
 
 /* --- Comparison Grid --- */
 .comparison-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
-/* --- Placeholder Card --- */
+/* --- Placeholder Card (Glassmorphism Effect) --- */
 .placeholder-card {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    border: 2px dashed #d0d0d0;
-    border-radius: 12px;
-    min-height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    min-height: 450px;
     cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
+    transition: all 0.3s ease;
 }
 .placeholder-card:hover {
-    background-color: #f7f7f7;
-    border-color: #007bff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
 }
 .add-button {
     font-size: 1.5rem;
-    color: #007bff;
-    font-weight: bold;
+    color: #e0e0e0;
+    font-weight: 600;
 }
 
 /* --- Product Card (when filled) --- */
 .product-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* Important for border-radius on children */
 }
 .product-header {
-    padding: 20px; text-align: center; position: relative;
-    border-bottom: 1px solid #eee;
+    padding: 25px; text-align: center; position: relative;
+    border-bottom: 1px solid #333;
 }
-.product-header img { max-width: 120px; margin-bottom: 10px; }
-.product-header h2 { margin: 0; font-size: 1.3em; }
+.product-header img { max-width: 120px; margin-bottom: 15px; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); }
+.product-header h2 { margin: 0; font-size: 1.5em; font-weight: 600; }
 .remove-button {
-    position: absolute; top: 10px; right: 10px; background: #eee;
-    border: none; border-radius: 50%; width: 24px; height: 24px;
-    cursor: pointer; font-weight: bold;
+    position: absolute; top: 15px; right: 15px; background: #333;
+    border: none; border-radius: 50%; width: 30px; height: 30px;
+    cursor: pointer; font-weight: bold; color: #fff; font-size: 1.2rem;
+    transition: background-color 0.2s;
 }
-.spec-list { list-style: none; padding: 0; margin: 0; flex-grow: 1; }
+.remove-button:hover { background: #ff4d4d; }
+
+.spec-list { list-style: none; padding: 10px 0; margin: 0; flex-grow: 1; }
 .spec-list li {
-    padding: 12px 20px; border-bottom: 1px solid #eee;
+    padding: 14px 25px;
     display: flex; justify-content: space-between;
+    font-size: 0.95rem;
 }
-.spec-label { font-weight: bold; color: #555; }
-.price-list { padding: 20px; background-color: #fafafa; border-top: 1px solid #eee; }
-.price-item {
-    display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;
-}
+.spec-list li:nth-child(even) { background-color: rgba(255, 255, 255, 0.02); }
+.spec-label { font-weight: 600; color: #b0b0b0; }
+
+.price-list { padding: 25px; background-color: #252525; }
+.price-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.price-item:last-child { margin-bottom: 0; }
 .buy-button {
-    background-color: #007bff; color: white; padding: 8px 12px;
-    text-decoration: none; border-radius: 5px; font-weight: bold;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: white; padding: 10px 18px;
+    text-decoration: none; border-radius: 8px; font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.buy-button:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4); }
 
 /* --- Modal Styles --- */
 .modal-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    display: none; /* Hidden by default */
-    justify-content: center; align-items: center;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    display: none; justify-content: center; align-items: center; z-index: 1000;
 }
 .modal-content {
-    background: white; padding: 25px; border-radius: 8px;
-    width: 90%; max-width: 500px; max-height: 80vh;
+    background: #1e1e1e; padding: 30px; border-radius: 12px;
+    border: 1px solid #444; width: 90%; max-width: 500px; max-height: 80vh;
     display: flex; flex-direction: column; position: relative;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.5);
 }
 .close-button {
     position: absolute; top: 10px; right: 15px; background: none;
     border: none; font-size: 2rem; cursor: pointer; color: #aaa;
 }
-#search-bar { width: 100%; padding: 12px; font-size: 1rem; margin-bottom: 15px; box-sizing: border-box; }
-.product-list-modal { list-style: none; padding: 0; margin: 0; overflow-y: auto; }
-.product-list-modal li {
-    padding: 15px; border-bottom: 1px solid #eee; cursor: pointer;
-    display: flex; align-items: center; gap: 15px;
+.modal-content h2 { text-align: center; margin-bottom: 20px; }
+#search-bar { 
+    width: 100%; padding: 14px; font-size: 1rem; margin-bottom: 15px; 
+    background-color: #333; border: 1px solid #555; color: #fff; border-radius: 8px;
 }
-.product-list-modal li:hover { background-color: #f0f2f5; }
+.product-list-modal { list-style: none; overflow-y: auto; }
+.product-list-modal li {
+    padding: 15px; border-bottom: 1px solid #333; cursor: pointer;
+    display: flex; align-items: center; gap: 15px; border-radius: 8px;
+    transition: background-color 0.2s;
+}
+.product-list-modal li:hover { background-color: #2a2a2a; }
 .product-list-modal img { width: 40px; height: 40px; }
 .product-list-modal .disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background-color: #f8f8f8;
+    opacity: 0.4; cursor: not-allowed; background-color: #252525;
 }

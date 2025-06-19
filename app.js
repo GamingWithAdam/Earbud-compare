@@ -1,5 +1,5 @@
 // --- APPLICATION STATE & GLOBAL VARIABLES ---
-let allEarbuds = []; // This will hold all our data once loaded from the JSON file
+let allEarbuds = []; 
 let selectedProducts = [null, null];
 let activeSlotIndex = null;
 
@@ -13,47 +13,106 @@ const searchBar = document.getElementById('search-bar');
 // --- ASYNCHRONOUS DATA LOADING ---
 
 /**
- * Fetches the earbud data from our JSON file and then starts the application.
- * This is the new starting point of our app.
+ * Fetches data, initializes the particle background, and starts the app.
  */
 async function initializeApp() {
+    // Start the particle background immediately
+    loadParticleBackground();
+
     try {
         const response = await fetch('./earbuds.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         allEarbuds = await response.json();
-        // Once data is loaded successfully, render the initial empty grid.
+        // Once data is loaded, render the initial empty grid.
         renderGrid(); 
     } catch (error) {
         console.error("Could not load earbud data:", error);
-        comparisonGrid.innerHTML = `<p style="text-align: center; color: red;">Error: Could not load product data. Please try again later.</p>`;
+        comparisonGrid.innerHTML = `<p style="text-align: center; color: #ff4d4d; font-size: 1.2rem;">Error: Could not load product data. Please try again later.</p>`;
     }
 }
 
+/**
+ * Loads and configures the tsParticles background effect.
+ */
+function loadParticleBackground() {
+    tsParticles.load("particles-js", {
+        fpsLimit: 60,
+        interactivity: {
+            events: {
+                onHover: {
+                    enable: true,
+                    mode: "repulse",
+                },
+                resize: true,
+            },
+            modes: {
+                repulse: {
+                    distance: 100,
+                    duration: 0.4,
+                },
+            },
+        },
+        particles: {
+            color: {
+                value: "#555",
+            },
+            links: {
+                color: "#555",
+                distance: 150,
+                enable: true,
+                opacity: 0.2,
+                width: 1,
+            },
+            collisions: {
+                enable: true,
+            },
+            move: {
+                direction: "none",
+                enable: true,
+                outMode: "bounce",
+                random: false,
+                speed: 1,
+                straight: false,
+            },
+            number: {
+                density: {
+                    enable: true,
+                    area: 800,
+                },
+                value: 80,
+            },
+            opacity: {
+                value: 0.2,
+            },
+            shape: {
+                type: "circle",
+            },
+            size: {
+                random: true,
+                value: 3,
+            },
+        },
+        detectRetina: true,
+    });
+}
 
-// --- FUNCTIONS (Mostly the same as before, but using `allEarbuds` variable) ---
+// --- CORE RENDERING & LOGIC FUNCTIONS (Unchanged from before) ---
 
-/** Renders the entire comparison grid based on the current state */
 function renderGrid() {
-    comparisonGrid.innerHTML = ''; // Clear the grid
+    comparisonGrid.innerHTML = '';
     selectedProducts.forEach((product, index) => {
-        let cardHTML;
-        if (product) {
-            cardHTML = createProductCardHTML(product, index);
-        } else {
-            cardHTML = createPlaceholderCardHTML(index);
-        }
+        let cardHTML = product ? createProductCardHTML(product, index) : createPlaceholderCardHTML(index);
         comparisonGrid.innerHTML += cardHTML;
     });
     addEventListenersToCards();
 }
 
-/** Creates HTML for a card showing a selected product */
 function createProductCardHTML(product, index) {
     product.prices.sort((a, b) => a.price - b.price);
     const specsHTML = Object.entries(product.specs).map(([key, value]) =>
-        `<li><span class="spec-label">${key}:</span> <span>${value}</span></li>`
+        `<li><span class="spec-label">${key}</span> <span>${value}</span></li>`
     ).join('');
     const pricesHTML = product.prices.map(p => `
         <div class="price-item">
@@ -65,7 +124,7 @@ function createProductCardHTML(product, index) {
     return `
         <div class="product-card">
             <div class="product-header">
-                <button class="remove-button" data-index="${index}">×</button>
+                <button class="remove-button" data-index="${index}">&times;</button>
                 <img src="${product.image}" alt="${product.name}">
                 <h2>${product.name}</h2>
             </div>
@@ -75,26 +134,26 @@ function createProductCardHTML(product, index) {
     `;
 }
 
-/** Creates HTML for an empty placeholder card */
 function createPlaceholderCardHTML(index) {
     return `
         <div class="placeholder-card" data-index="${index}">
-            <span class="add-button">+ Add Earbud</span>
+            <span class="add-button">+ Compare</span>
         </div>
     `;
 }
 
-/** Attaches click listeners to the newly rendered cards */
 function addEventListenersToCards() {
     document.querySelectorAll('.placeholder-card').forEach(card => {
         card.addEventListener('click', () => openModal(card.dataset.index));
     });
     document.querySelectorAll('.remove-button').forEach(button => {
-        button.addEventListener('click', () => removeProduct(button.dataset.index));
+        button.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents card click event from firing
+            removeProduct(button.dataset.index);
+        });
     });
 }
 
-/** Opens the product selection modal */
 function openModal(index) {
     activeSlotIndex = parseInt(index);
     populateModalList();
@@ -102,13 +161,11 @@ function openModal(index) {
     searchBar.focus();
 }
 
-/** Closes the product selection modal */
 function closeModal() {
     modal.style.display = 'none';
     searchBar.value = '';
 }
 
-/** Fills the modal list with products, filtering by search term */
 function populateModalList(searchTerm = '') {
     productList.innerHTML = '';
     const selectedIds = selectedProducts.filter(p => p).map(p => p.id);
@@ -120,8 +177,6 @@ function populateModalList(searchTerm = '') {
         const li = document.createElement('li');
         const isSelected = selectedIds.includes(product.id);
         li.innerHTML = `<img src="${product.image}" alt=""> <span>${product.name}</span>`;
-        li.dataset.productId = product.id;
-
         if (isSelected) {
             li.classList.add('disabled');
         } else {
@@ -131,7 +186,6 @@ function populateModalList(searchTerm = '') {
     });
 }
 
-/** Handles selecting a product from the modal */
 function selectProduct(productId) {
     const product = allEarbuds.find(p => p.id === parseInt(productId));
     selectedProducts[activeSlotIndex] = product;
@@ -139,7 +193,6 @@ function selectProduct(productId) {
     renderGrid();
 }
 
-/** Handles removing a product from a slot */
 function removeProduct(index) {
     selectedProducts[index] = null;
     renderGrid();
@@ -152,5 +205,5 @@ modal.addEventListener('click', (e) => {
 });
 searchBar.addEventListener('input', (e) => populateModalList(e.target.value));
 
-// Start the application by loading the data.
+// Start the application.
 initializeApp();
