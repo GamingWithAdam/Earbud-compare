@@ -370,5 +370,473 @@
         "specs": { "Noise Cancellation": "Good", "Sound": "Great (Natural)", "App Support": "Yes", "Water Resistance": "None" },
         "scores": { "anc_score": 3.9, "sound_score": 4.4, "app_score": 1, "ip_rating": 0, "price": 249 },
         "regionalPrices": { "US": [ { "store": "Amazon US", "price": 249, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 229, "currency": "£", "link": "#" } ] }
+,
+    {
+        "id": 272, "name": "Austrian Audio Hi-X15", "type": "headphone", "image": "https://i.imgur.com/G20gD9y.png",
+        "specs": { "Noise Cancellation": "None (Studio)", "Sound": "Excellent (Neutral)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.3, "app_score": 0, "ip_rating": 0, "price": 119 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 119, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 99, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 273, "name": "1MORE Triple Driver", "type": "earbud", "image": "https://i.imgur.com/EDVot5S.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (Value)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.4, "app_score": 0, "ip_rating": 0, "price": 79 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 79, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 69, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 274, "name": "Edifier W800BT Plus", "type": "headphone", "image": "https://i.imgur.com/UfJ4wT0.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Good (Budget)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 3.4, "app_score": 0, "ip_rating": 0, "price": 49 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 49, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 45, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 275, "name": "Marshall Minor III", "type": "earbud", "image": "https://i.imgur.com/5uR3T3r.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Good (Rock)", "App Support": "No", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 0, "sound_score": 3.7, "app_score": 0, "ip_rating": 4, "price": 129 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 129, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 119, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 276, "name": "Beyerdynamic DT 880 Pro", "type": "headphone", "image": "https://i.imgur.com/7YfEwql.png",
+        "specs": { "Noise Cancellation": "None (Semi-Open)", "Sound": "Excellent (Analytical)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 249 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 249, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 189, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 277, "name": "Final Audio E5000", "type": "earbud", "image": "https://i.imgur.com/J3T1i0A.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (Warm)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.7, "app_score": 0, "ip_rating": 0, "price": 279 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 279, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 249, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 278, "name": "Razer Barracuda Pro", "type": "headphone", "image": "https://i.imgur.com/rL7tY8R.png",
+        "specs": { "Noise Cancellation": "Good (Gaming)", "Sound": "Great (Gaming)", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 3.9, "sound_score": 4.2, "app_score": 1, "ip_rating": 0, "price": 249 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 249, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 229, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 279, "name": "JBL Tune 130NC", "type": "earbud", "image": "https://i.imgur.com/sS4fBwB.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good (Punchy)", "App Support": "Yes", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 3.3, "sound_score": 3.6, "app_score": 1, "ip_rating": 4, "price": 79 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 79, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 69, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 280, "name": "Sennheiser HD 660S2", "type": "headphone", "image": "https://i.imgur.com/vH9J0yT.png",
+        "specs": { "Noise Cancellation": "None (Open-Back)", "Sound": "Audiophile", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.9, "app_score": 0, "ip_rating": 0, "price": 599 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 599, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 499, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 281, "name": "Lypertek PurePlay Z5", "type": "earbud", "image": "https://i.imgur.com/4q2O5yC.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Great", "App Support": "Yes", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 3.6, "sound_score": 4.2, "app_score": 1, "ip_rating": 4, "price": 129 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 129, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 119, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 282, "name": "Moondrop Kato", "type": "earbud", "image": "https://i.imgur.com/9wN1yG9.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.7, "app_score": 0, "ip_rating": 0, "price": 189 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 189, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 169, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 283, "name": "Audio-Technica ATH-M30x", "type": "headphone", "image": "https://i.imgur.com/f0B2W5f.png",
+        "specs": { "Noise Cancellation": "None (Studio)", "Sound": "Good (Value)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4, "app_score": 0, "ip_rating": 0, "price": 79 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 79, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 69, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 284, "name": "Beats Flex", "type": "earbud", "image": "https://i.imgur.com/f1zXz9k.png",
+        "specs": { "Noise Cancellation": "None (Neckband)", "Sound": "Good", "App Support": "No", "Water Resistance": "Sweat" },
+        "scores": { "anc_score": 0, "sound_score": 3.3, "app_score": 0, "ip_rating": 2, "price": 69 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 69, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 59, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 285, "name": "Shure AONIC Free", "type": "earbud", "image": "https://i.imgur.com/d9jY3hW.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Great (Monitor)", "App Support": "Yes", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 0, "sound_score": 4.3, "app_score": 1, "ip_rating": 4, "price": 199 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 179, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 286, "name": "HiFiMan HE-R9", "type": "headphone", "image": "https://i.imgur.com/2b7J9Vp.png",
+        "specs": { "Noise Cancellation": "None (Closed-Back)", "Sound": "Excellent (Dynamic)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 149 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 149, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 139, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 287, "name": "Skullcandy Push Active", "type": "earbud", "image": "https://i.imgur.com/3Z6H4XQ.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Decent (Bass)", "App Support": "Yes", "Water Resistance": "IP55" },
+        "scores": { "anc_score": 0, "sound_score": 3, "app_score": 1, "ip_rating": 5, "price": 79 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 79, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 69, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 288, "name": "Bowers & Wilkins Px7 S2", "type": "headphone", "image": "https://i.imgur.com/T0bS1m5.png",
+        "specs": { "Noise Cancellation": "Excellent", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 4.4, "sound_score": 4.6, "app_score": 1, "ip_rating": 0, "price": 399 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 399, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 379, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 289, "name": "Anker Soundcore Life Note 3", "type": "earbud", "image": "https://i.imgur.com/dK7Y6gT.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 3.2, "sound_score": 3.4, "app_score": 1, "ip_rating": 5, "price": 69 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 69, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 59, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 290, "name": "Focal Celestee", "type": "headphone", "image": "https://i.imgur.com/9nF8YyL.png",
+        "specs": { "Noise Cancellation": "None (Closed-Back)", "Sound": "Audiophile", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.9, "app_score": 0, "ip_rating": 0, "price": 999 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 999, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 899, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 291, "name": "Creative SXFI Gamer", "type": "headphone", "image": "https://i.imgur.com/Q2h3o3p.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Great (Gaming)", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.3, "app_score": 1, "ip_rating": 0, "price": 129 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 129, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 119, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 292, "name": "Shokz OpenMove", "type": "headphone", "image": "https://i.imgur.com/7b8k9lM.png",
+        "specs": { "Noise Cancellation": "None (Bone Conduction)", "Sound": "Specialized", "App Support": "No", "Water Resistance": "IP55" },
+        "scores": { "anc_score": 0, "sound_score": 2.5, "app_score": 0, "ip_rating": 5, "price": 79 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 79, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 69, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 293, "name": "SoundPEATS T2", "type": "earbud", "image": "https://i.imgur.com/2m6N8iJ.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good", "App Support": "No", "Water Resistance": "IPX6" },
+        "scores": { "anc_score": 3.1, "sound_score": 3.5, "app_score": 0, "ip_rating": 6, "price": 59 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 59, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 49, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 294, "name": "DCA Aeon 2 Noire", "type": "headphone", "image": "https://i.imgur.com/sW3o4rK.png",
+        "specs": { "Noise Cancellation": "None (Planar)", "Sound": "Excellent", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.8, "app_score": 0, "ip_rating": 0, "price": 899 },
+        "regionalPrices": { "US": [ { "store": "Dan Clark Audio", "price": 899, "currency": "$", "link": "#" } ], "GB": [ { "store": "Dan Clark Audio", "price": 849, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 295, "name": "Kinera Idun Golden", "type": "earbud", "image": "https://i.imgur.com/N5W9Y8o.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (Hybrid)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 169 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 169, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 159, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 296, "name": "SteelSeries Arctis 1 Wireless", "type": "headphone", "image": "https://i.imgur.com/uX8y7Gz.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Good (Gaming)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 3.9, "app_score": 0, "ip_rating": 0, "price": 99 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 89, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 297, "name": "Marshall Monitor II ANC", "type": "headphone", "image": "https://i.imgur.com/c6x7y8A.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good (Rock)", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 3.8, "sound_score": 4.1, "app_score": 1, "ip_rating": 0, "price": 319 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 319, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 279, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 298, "name": "Grado GW100x", "type": "headphone", "image": "https://i.imgur.com/G20gD9y.png",
+        "specs": { "Noise Cancellation": "None (Open-Back)", "Sound": "Excellent", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.7, "app_score": 0, "ip_rating": 0, "price": 275 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 275, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 249, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 299, "name": "BLON BL-03", "type": "earbud", "image": "https://i.imgur.com/EDVot5S.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Legendary (Value)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.2, "app_score": 0, "ip_rating": 0, "price": 26 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 26, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 24, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 300, "name": "Turtle Beach Stealth 700 Gen 2 MAX", "type": "headphone", "image": "https://i.imgur.com/UfJ4wT0.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Great (Gaming)", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.3, "app_score": 1, "ip_rating": 0, "price": 199 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 179, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 301, "name": "FiiO FA7s", "type": "earbud", "image": "https://i.imgur.com/5uR3T3r.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (6-Driver)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.7, "app_score": 0, "ip_rating": 0, "price": 339 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 339, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 319, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 302, "name": "Meze Audio Rai Penta", "type": "earbud", "image": "https://i.imgur.com/7YfEwql.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Audiophile", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.9, "app_score": 0, "ip_rating": 0, "price": 1099 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 1099, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 999, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 303, "name": "Corsair Virtuoso RGB Wireless XT", "type": "headphone", "image": "https://i.imgur.com/J3T1i0A.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Excellent (Gaming)", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.5, "app_score": 1, "ip_rating": 0, "price": 269 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 269, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 249, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 304, "name": "Google Pixel Buds A-Series", "type": "earbud", "image": "https://i.imgur.com/rL7tY8R.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 0, "sound_score": 3.6, "app_score": 1, "ip_rating": 4, "price": 99 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 89, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 305, "name": "Apple AirPods (2nd Gen)", "type": "earbud", "image": "https://i.imgur.com/sS4fBwB.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Decent", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 3, "app_score": 1, "ip_rating": 0, "price": 129 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 129, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 119, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 306, "name": "Nothing Ear (stick)", "type": "earbud", "image": "https://i.imgur.com/vH9J0yT.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IP54" },
+        "scores": { "anc_score": 0, "sound_score": 3.7, "app_score": 1, "ip_rating": 4, "price": 99 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 89, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 307, "name": "Bowers & Wilkins Pi5 S2", "type": "earbud", "image": "https://i.imgur.com/4q2O5yC.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "IP54" },
+        "scores": { "anc_score": 3.8, "sound_score": 4.7, "app_score": 1, "ip_rating": 4, "price": 299 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 299, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 279, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 308, "name": "JBL Live Pro 2", "type": "earbud", "image": "https://i.imgur.com/9wN1yG9.png",
+        "specs": { "Noise Cancellation": "Very Good", "Sound": "Good (Punchy)", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 4, "sound_score": 3.9, "app_score": 1, "ip_rating": 5, "price": 149 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 149, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 129, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 309, "name": "Creative Outlier Pro", "type": "earbud", "image": "https://i.imgur.com/f0B2W5f.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 3.5, "sound_score": 3.7, "app_score": 1, "ip_rating": 5, "price": 89 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 89, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 79, "currency": "£", "link": "#" } ] }
+,
+    {
+        "id": 310, "name": "Audio-Technica ATH-R70x", "type": "headphone", "image": "https://i.imgur.com/f1zXz9k.png",
+        "specs": { "Noise Cancellation": "None (Open-Back)", "Sound": "Excellent (Studio)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.7, "app_score": 0, "ip_rating": 0, "price": 349 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 349, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 299, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 311, "name": "Meze Audio Liric", "type": "headphone", "image": "https://i.imgur.com/d9jY3hW.png",
+        "specs": { "Noise Cancellation": "None (Planar)", "Sound": "Audiophile", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.9, "app_score": 0, "ip_rating": 0, "price": 2000 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 2000, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 1899, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 312, "name": "Bang & Olufsen Beoplay H95", "type": "headphone", "image": "https://i.imgur.com/2b7J9Vp.png",
+        "specs": { "Noise Cancellation": "Excellent", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 4.6, "sound_score": 4.7, "app_score": 1, "ip_rating": 0, "price": 899 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 899, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 779, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 313, "name": "SeeAudio Yume II", "type": "earbud", "image": "https://i.imgur.com/3Z6H4XQ.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (Hybrid)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 199 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 189, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 314, "name": "Turtle Beach Stealth 600 Gen 2", "type": "headphone", "image": "https://i.imgur.com/T0bS1m5.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Good (Gaming)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 3.9, "app_score": 0, "ip_rating": 0, "price": 99 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 89, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 315, "name": "SoundMAGIC E11C", "type": "earbud", "image": "https://i.imgur.com/dK7Y6gT.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Good (Value)", "App Support": "No", "Water Resistance": "Sweat" },
+        "scores": { "anc_score": 0, "sound_score": 3.8, "app_score": 0, "ip_rating": 2, "price": 49 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 49, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 45, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 316, "name": "Drop + Sennheiser PC37X", "type": "headphone", "image": "https://i.imgur.com/9nF8YyL.png",
+        "specs": { "Noise Cancellation": "None (Open-Back)", "Sound": "Excellent (Gaming)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.5, "app_score": 0, "ip_rating": 0, "price": 120 },
+        "regionalPrices": { "US": [ { "store": "Drop", "price": 120, "currency": "$", "link": "#" } ], "GB": [ { "store": "Drop", "price": 110, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 317, "name": "Kinera Celest Gumiho", "type": "earbud", "image": "https://i.imgur.com/Q2h3o3p.png",
+        "specs": { "Noise Cancellation": "None (Planar)", "Sound": "Great (Value)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.3, "app_score": 0, "ip_rating": 0, "price": 49 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 49, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 45, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 318, "name": "Urbanista Phoenix", "type": "earbud", "image": "https://i.imgur.com/7b8k9lM.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good", "App Support": "Yes", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 3.7, "sound_score": 3.8, "app_score": 1, "ip_rating": 4, "price": 149 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 149, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 129, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 319, "name": "Sony MDR-Z1R", "type": "headphone", "image": "https://i.imgur.com/2m6N8iJ.png",
+        "specs": { "Noise Cancellation": "None (Flagship)", "Sound": "Legendary", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 5, "app_score": 0, "ip_rating": 0, "price": 1999 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 1999, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 1799, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 320, "name": "Letshuoer Z12", "type": "earbud", "image": "https://i.imgur.com/sW3o4rK.png",
+        "specs": { "Noise Cancellation": "None (Planar)", "Sound": "Excellent", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.7, "app_score": 0, "ip_rating": 0, "price": 169 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 169, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 159, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 321, "name": "AKG N400NC TWS", "type": "earbud", "image": "https://i.imgur.com/N5W9Y8o.png",
+        "specs": { "Noise Cancellation": "Very Good", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "IPX7" },
+        "scores": { "anc_score": 4.1, "sound_score": 4.4, "app_score": 1, "ip_rating": 7, "price": 149 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 149, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 129, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 322, "name": "Beyerdynamic Lagoon ANC", "type": "headphone", "image": "https://i.imgur.com/uX8y7Gz.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 3.9, "sound_score": 4.5, "app_score": 1, "ip_rating": 0, "price": 299 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 299, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 249, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 323, "name": "RHA T20i", "type": "earbud", "image": "https://i.imgur.com/c6x7y8A.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (Tuning Filters)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 139 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 139, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 119, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 324, "name": "Philips Fidelio L3", "type": "headphone", "image": "https://i.imgur.com/G20gD9y.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 3.8, "sound_score": 4.4, "app_score": 1, "ip_rating": 0, "price": 199 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 179, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 325, "name": "JBL Quantum TWS", "type": "earbud", "image": "https://i.imgur.com/EDVot5S.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Good (Gaming)", "App Support": "Yes", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 3.6, "sound_score": 3.9, "app_score": 1, "ip_rating": 4, "price": 149 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 149, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 129, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 326, "name": "HiFiMan Arya", "type": "headphone", "image": "https://i.imgur.com/UfJ4wT0.png",
+        "specs": { "Noise Cancellation": "None (Planar)", "Sound": "Legendary (Audiophile)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 5, "app_score": 0, "ip_rating": 0, "price": 1299 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 1299, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 1199, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 327, "name": "Campfire Audio Solaris", "type": "earbud", "image": "https://i.imgur.com/5uR3T3r.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Legendary (Flagship)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 5, "app_score": 0, "ip_rating": 0, "price": 1499 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 1499, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 1399, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 328, "name": "beyerdynamic MMX 300", "type": "headphone", "image": "https://i.imgur.com/7YfEwql.png",
+        "specs": { "Noise Cancellation": "None (Gaming)", "Sound": "Excellent (Gaming)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 299 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 299, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 249, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 329, "name": "Westone Audio W40", "type": "earbud", "image": "https://i.imgur.com/J3T1i0A.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (4-Driver)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.7, "app_score": 0, "ip_rating": 0, "price": 499 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 499, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 449, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 330, "name": "V-MODA S-80", "type": "headphone", "image": "https://i.imgur.com/rL7tY8R.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Good (Fashion)", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 3.7, "app_score": 1, "ip_rating": 0, "price": 149 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 149, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 129, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 331, "name": "Cleer Audio GOAL", "type": "earbud", "image": "https://i.imgur.com/sS4fBwB.png",
+        "specs": { "Noise Cancellation": "None (Open-Ear)", "Sound": "Specialized", "App Support": "No", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 0, "sound_score": 2.9, "app_score": 0, "ip_rating": 4, "price": 99 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 99, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 89, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 332, "name": "PSB M4U 8 MKII", "type": "headphone", "image": "https://i.imgur.com/vH9J0yT.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Excellent (Natural)", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 3.9, "sound_score": 4.6, "app_score": 1, "ip_rating": 0, "price": 399 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 399, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 349, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 333, "name": "TIN HiFi T3 Plus", "type": "earbud", "image": "https://i.imgur.com/4q2O5yC.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (Value)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.3, "app_score": 0, "ip_rating": 0, "price": 69 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 69, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 59, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 334, "name": "Shure SRH840A", "type": "headphone", "image": "https://i.imgur.com/9wN1yG9.png",
+        "specs": { "Noise Cancellation": "None (Studio)", "Sound": "Excellent (Neutral)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.4, "app_score": 0, "ip_rating": 0, "price": 149 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 149, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 129, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 335, "name": "Creative Zen Air", "type": "earbud", "image": "https://i.imgur.com/f0B2W5f.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Decent", "App Support": "No", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 2.8, "sound_score": 3.2, "app_score": 0, "ip_rating": 4, "price": 49 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 49, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 45, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 336, "name": "Sivga Phoenix", "type": "headphone", "image": "https://i.imgur.com/f1zXz9k.png",
+        "specs": { "Noise Cancellation": "None (Open-Back)", "Sound": "Excellent (Warm)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 255 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 255, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 239, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 337, "name": "Dunu Titan S", "type": "earbud", "image": "https://i.imgur.com/d9jY3hW.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (Neutral)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.4, "app_score": 0, "ip_rating": 0, "price": 79 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 79, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 69, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 338, "name": "Focal Radiance", "type": "headphone", "image": "https://i.imgur.com/2b7J9Vp.png",
+        "specs": { "Noise Cancellation": "None (Closed-Back)", "Sound": "Audiophile", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.9, "app_score": 0, "ip_rating": 0, "price": 1299 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 1299, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 1199, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 339, "name": "Status Flagship ANC", "type": "headphone", "image": "https://i.imgur.com/3Z6H4XQ.png",
+        "specs": { "Noise Cancellation": "Very Good", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 4.2, "sound_score": 4.5, "app_score": 1, "ip_rating": 0, "price": 199 },
+        "regionalPrices": { "US": [ { "store": "Status", "price": 199, "currency": "$", "link": "#" } ], "GB": [ { "store": "Status", "price": 189, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 340, "name": "Thieaudio Voyager 3", "type": "earbud", "image": "https://i.imgur.com/T0bS1m5.png",
+        "specs": { "Noise Cancellation": "None (IEM)", "Sound": "Excellent (3-Driver)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 159 },
+        "regionalPrices": { "US": [ { "store": "Linsoul", "price": 159, "currency": "$", "link": "#" } ], "GB": [ { "store": "Linsoul", "price": 149, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 341, "name": "Audeze Mobius", "type": "headphone", "image": "https://i.imgur.com/dK7Y6gT.png",
+        "specs": { "Noise Cancellation": "None (Planar)", "Sound": "Excellent (3D Audio)", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.7, "app_score": 1, "ip_rating": 0, "price": 399 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 399, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 369, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 342, "name": "Philips Fidelio T1", "type": "earbud", "image": "https://i.imgur.com/9nF8YyL.png",
+        "specs": { "Noise Cancellation": "Good", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "IPX4" },
+        "scores": { "anc_score": 3.8, "sound_score": 4.4, "app_score": 1, "ip_rating": 4, "price": 199 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 179, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 343, "name": "VZR Model One", "type": "headphone", "image": "https://i.imgur.com/Q2h3o3p.png",
+        "specs": { "Noise Cancellation": "None (Gaming)", "Sound": "Excellent (Gaming)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 349 },
+        "regionalPrices": { "US": [ { "store": "VZR", "price": 349, "currency": "$", "link": "#" } ], "GB": [ { "store": "VZR", "price": 329, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 344, "name": "Oppo Enco X2", "type": "earbud", "image": "https://i.imgur.com/7b8k9lM.png",
+        "specs": { "Noise Cancellation": "Very Good", "Sound": "Excellent", "App Support": "Yes", "Water Resistance": "IP54" },
+        "scores": { "anc_score": 4.2, "sound_score": 4.5, "app_score": 1, "ip_rating": 4, "price": 199 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 169, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 345, "name": "Monolith M1570", "type": "headphone", "image": "https://i.imgur.com/2m6N8iJ.png",
+        "specs": { "Noise Cancellation": "None (Planar)", "Sound": "Audiophile", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.8, "app_score": 0, "ip_rating": 0, "price": 599 },
+        "regionalPrices": { "US": [ { "store": "Monoprice", "price": 599, "currency": "$", "link": "#" } ], "GB": [ { "store": "Monoprice", "price": 549, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 346, "name": "Soundcore by Anker Life P2 Mini", "type": "earbud", "image": "https://i.imgur.com/sW3o4rK.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Decent", "App Support": "No", "Water Resistance": "IPX5" },
+        "scores": { "anc_score": 0, "sound_score": 2.8, "app_score": 0, "ip_rating": 5, "price": 39 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 39, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 35, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 347, "name": "Audeze Euclid", "type": "earbud", "image": "https://i.imgur.com/N5W9Y8o.png",
+        "specs": { "Noise Cancellation": "None (Planar)", "Sound": "Audiophile", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.9, "app_score": 0, "ip_rating": 0, "price": 1299 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 1299, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 1099, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 348, "name": "Astro A50 Wireless", "type": "headphone", "image": "https://i.imgur.com/uX8y7Gz.png",
+        "specs": { "Noise Cancellation": "None", "Sound": "Excellent (Gaming)", "App Support": "Yes", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.5, "app_score": 1, "ip_rating": 0, "price": 299 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 299, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 279, "currency": "£", "link": "#" } ] }
+    },
+    {
+        "id": 349, "name": "Sivga Oriole", "type": "headphone", "image": "https://i.imgur.com/c6x7y8A.png",
+        "specs": { "Noise Cancellation": "None (Closed-Back)", "Sound": "Excellent (Warm)", "App Support": "No", "Water Resistance": "None" },
+        "scores": { "anc_score": 0, "sound_score": 4.6, "app_score": 0, "ip_rating": 0, "price": 199 },
+        "regionalPrices": { "US": [ { "store": "Amazon US", "price": 199, "currency": "$", "link": "#" } ], "GB": [ { "store": "Amazon UK", "price": 189, "currency": "£", "link": "#" } ] }
     }
 ]
