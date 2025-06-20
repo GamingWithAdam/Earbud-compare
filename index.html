@@ -3,19 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- THIS IS THE NEW TITLE -->
-    <title>Buds Compare</title>
-    
-    <!-- THIS IS THE NEW ICON (FAVICON) LINK -->
-    <link rel="icon" type="image/png" href="https://imgur.com/a/iz1HwUm">
-
-    <!-- Google Font for a modern look -->
+    <title>Dynamic Audio Comparator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet Link (Unchanged) -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,9 +33,26 @@
 
     <div class="content-wrapper">
         <header>
-            <h1 data-lang="mainTitle">Find Your Perfect Earbuds</h1>
-            <p class="subtitle" data-lang="subtitle">Select up to two products below to compare specs and prices.</p>
+            <h1 data-lang="mainTitle">Find Your Perfect Audio Gear</h1>
+            <p class="subtitle" data-lang="subtitle">Compare specs and prices for earbuds and headphones.</p>
         </header>
+
+        <!-- NEW: Product Type Filter Bar -->
+        <div class="filter-container">
+            <div class="filter-group">
+                <input type="radio" id="filter-all" name="product-type" value="all" checked>
+                <label for="filter-all">All</label>
+            </div>
+            <div class="filter-group">
+                <input type="radio" id="filter-earbuds" name="product-type" value="earbud">
+                <label for="filter-earbuds">Earbuds</label>
+            </div>
+            <div class="filter-group">
+                <input type="radio" id="filter-headphones" name="product-type" value="headphone">
+                <label for="filter-headphones">Headphones</label>
+            </div>
+        </div>
+
         <div id="comparison-grid" class="comparison-grid"></div>
 
         <section class="chart-container">
@@ -70,14 +78,13 @@
 
     <div id="product-modal" class="modal-overlay">
         <div class="modal-content">
-            <button id="close-modal" class="close-button">×</button>
-            <h2 data-lang="modalTitle">Select an Earbud</h2>
+            <button id="close-modal" class="close-button">&times;</button>
+            <h2 data-lang="modalTitle">Select a Product</h2>
             <input type="search" id="search-bar" placeholder="Search for Sony, Anker, Bose...">
             <ul id="product-list" class="product-list-modal"></ul>
         </div>
     </div>
 
-    <!-- Script loading section -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.43.1/tsparticles.min.js"></script>
     <script src="app.js"></script>
