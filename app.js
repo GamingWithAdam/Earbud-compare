@@ -36,23 +36,13 @@ const tabContents = D.querySelectorAll('.tab-content');
 const quickViewModal = D.getElementById('quick-view-modal');
 const quickViewContent = D.getElementById('quick-view-content');
 
-// --- TRANSLATION DICTIONARY (EXPANDED) ---
+// --- TRANSLATION DICTIONARY ---
 const translations = {
-    en: {
-        settingsTitle: "Settings", countryLabel: "Country / Region", languageLabel: "Language", mainTitle: "Find Your Perfect Audio Gear", subtitle: "Compare specs and prices for earbuds and headphones.", modalTitle: "Select a Product"
-    },
-    de: {
-        settingsTitle: "Einstellungen", countryLabel: "Land / Region", languageLabel: "Sprache", mainTitle: "Finde dein perfektes Audio-Gerät", subtitle: "Vergleiche Daten und Preise für Ohrhörer und Kopfhörer.", modalTitle: "Produkt auswählen"
-    },
-    es: {
-        settingsTitle: "Ajustes", countryLabel: "País / Región", languageLabel: "Idioma", mainTitle: "Encuentra tu Equipo de Audio Perfecto", subtitle: "Compara especificaciones y precios de auriculares y cascos.", modalTitle: "Seleccionar un Producto"
-    },
-    fr: {
-        settingsTitle: "Paramètres", countryLabel: "Pays / Région", languageLabel: "Langue", mainTitle: "Trouvez Votre Équipement Audio Parfait", subtitle: "Comparez les spécifications et les prix des écouteurs et des casques.", modalTitle: "Sélectionner un Produit"
-    },
-    ja: {
-        settingsTitle: "設定", countryLabel: "国・地域", languageLabel: "言語", mainTitle: "完璧なオーディオ機器を見つけよう", subtitle: "イヤホンとヘッドホンのスペックと価格を比較します。", modalTitle: "製品を選択"
-    }
+    en: { settingsTitle: "Settings", countryLabel: "Country / Region", languageLabel: "Language", mainTitle: "Find Your Perfect Audio Gear", subtitle: "Compare specs and prices for earbuds and headphones.", modalTitle: "Select a Product" },
+    de: { settingsTitle: "Einstellungen", countryLabel: "Land / Region", languageLabel: "Sprache", mainTitle: "Finde dein perfektes Audio-Gerät", subtitle: "Vergleiche Daten und Preise für Ohrhörer und Kopfhörer.", modalTitle: "Produkt auswählen" },
+    es: { settingsTitle: "Ajustes", countryLabel: "País / Región", languageLabel: "Idioma", mainTitle: "Encuentra tu Equipo de Audio Perfecto", subtitle: "Compara especificaciones y precios de auriculares y cascos.", modalTitle: "Seleccionar un Producto" },
+    fr: { settingsTitle: "Paramètres", countryLabel: "Pays / Région", languageLabel: "Langue", mainTitle: "Trouvez Votre Équipement Audio Parfait", subtitle: "Comparez les spécifications et les prix des écouteurs et des casques.", modalTitle: "Sélectionner un Produit" },
+    ja: { settingsTitle: "設定", countryLabel: "国・地域", languageLabel: "言語", mainTitle: "完璧なオーディオ機器を見つけよう", subtitle: "イヤホンとヘッドホンのスペックと価格を比較します。", modalTitle: "製品を選択" }
 };
 
 // --- INITIALIZATION ---
@@ -87,7 +77,6 @@ function applyTheme(theme) {
     localStorage.setItem('theme', theme);
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     D.body.dataset.theme = theme === 'system' ? (systemPrefersDark ? 'dark' : 'light') : theme;
-    
     if (allProducts.length > 0) {
         renderOrUpdateChart();
         renderScatterPlot();
@@ -153,33 +142,156 @@ function setupEventListeners() {
     });
 
     tableSearchInput.addEventListener('input', (e) => renderDataTable(e.target.value));
+    fullDataTableBody.addEventListener('click', (e) => {
+        const row = e.target.closest('tr');
+        if (row && row.dataset.productId) {
+            openQuickViewModal(parseInt(row.dataset.productId));
+        }
+    });
     closeAddModalButton.addEventListener('click', closeModal);
     addProductModal.addEventListener('click', (e) => { if (e.target === addProductModal) closeModal(); });
     quickViewModal.addEventListener('click', (e) => { if (e.target === quickViewModal) closeQuickViewModal(); });
     searchBar.addEventListener('input', (e) => populateModalList(e.target.value));
 }
 
-// --- ALL OTHER FUNCTIONS (UNCHANGED LOGIC, MINIFIED FOR BREVITY) ---
-function getFilteredData(){return"all"===currentFilter?[...allProducts]:allProducts.filter(e=>e.type===currentFilter)}
-function openModal(e){activeSlotIndex=e,populateModalList(),addProductModal.classList.add("active")}
-function closeModal(){addProductModal.classList.remove("active")}
-function openQuickViewModal(e){const t=allProducts.find(t=>t.id===e);if(!t)return;quickViewContent.innerHTML=`\n        <button id="close-quick-view" class="close-button">&times;</button>\n        <div class="product-header"><img src="${t.image}" alt="${t.name}"><h2>${t.name}</h2></div>\n        <ul class="spec-list">${Object.entries(t.specs).map(([e,t])=>`<li><span class="spec-label">${e}</span> <span>${t}</span></li>`).join("")}</ul>\n        <div class="price-list">${createPriceListHTML(t)}</div>\n        <button class="add-to-compare-btn" data-product-id="${t.id}">+ Add to Compare</button>`,quickViewModal.classList.add("active"),D.getElementById("close-quick-view").addEventListener("click",closeQuickViewModal),D.querySelector(".add-to-compare-btn").addEventListener("click",(e=>{const t=parseInt(e.target.dataset.productId),n=selectedProducts.findIndex(e=>null===e);selectProduct(t,-1!==n?n:selectedProducts.length),closeQuickViewModal()}))}
-function closeQuickViewModal(){quickViewModal.classList.remove("active")}
-function renderGridAndComparisonTable(){comparisonGrid.innerHTML="",selectedProducts.forEach(((e,t)=>{comparisonGrid.innerHTML+=e?createProductCardHTML(e,t):createPlaceholderCardHTML(t)})),null!==selectedProducts[selectedProducts.length-1]&&(comparisonGrid.innerHTML+=createPlaceholderCardHTML(selectedProducts.length)),addEventListenersToCards(),renderDirectComparisonTable()}
-function selectProduct(e,t){const n=allProducts.find(t=>t.id===parseInt(e));t>=selectedProducts.length?selectedProducts.push(n):selectedProducts[t]=n,closeModal(),renderGridAndComparisonTable()}
-function removeProduct(e){selectedProducts.splice(e,1),selectedProducts.length<2&&selectedProducts.push(null),renderGridAndComparisonTable()}
-function renderDirectComparisonTable(){const e=selectedProducts.filter(e=>null!==e);if(e.length<1)return void(directComparisonContainer.style.display="none");directComparisonContainer.style.display="block";const t=["Price",...Object.keys(e[0].specs)];let n="<thead><tr><th>Feature</th>";e.forEach((e=>{n+=`<th><img src="${e.image}" class="product-image" alt="${e.name}"><br>${e.name}</th>`})),n+="</tr></thead><tbody>",t.forEach((t=>{n+=`<tr><td><strong>${t}</strong></td>`,e.forEach((e=>{let o="";o="Price"===t?`${(e.regionalPrices[userRegion]||e.regionalPrices.US)[0].currency}${(e.regionalPrices[userRegion]||e.regionalPrices.US)[0].price}`:e.specs[t]||"N/A",n+=`<td>${o}</td>`})),n+="</tr>"})),directComparisonTable.innerHTML=n+"</tbody>"}
-function renderOrUpdateChart(){let e=getFilteredData();if(!e.length)return void(comparisonChart&&comparisonChart.destroy());const t=chartCategorySelector.value,n=t==="price";e.sort(((e,o)=>n?e.scores[t]-o.scores[t]:o.scores[t]-e.scores[t])),comparisonChart&&comparisonChart.destroy(),D.querySelector("#comparisonChart").parentElement.style.height=`${e.length*28}px`,comparisonChart=new Chart(barChartCanvas,{type:"bar",data:{labels:e.map((e=>e.name)),datasets:[{label:chartCategorySelector.options[chartCategorySelector.selectedIndex].text,data:e.map((e=>e.scores[t])),backgroundColor:"rgba(0, 123, 255, 0.6)",borderColor:"rgba(0, 123, 255, 1)",borderWidth:1}]},options:{indexAxis:"y",responsive:!0,maintainAspectRatio:!1,onClick:(t=>{const n=comparisonChart.getElementsAtEventForMode(t,"nearest",{intersect:!0},!0);n.length&&openQuickViewModal(e[n[0].index].id)}),onHover:((e,t)=>{e.native.target.style.cursor=t[0]?"pointer":"default"}),plugins:{legend:{display:!1},tooltip:{callbacks:{label:e=>` ${e.dataset.label||""}: ${n?new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"}).format(e.parsed.x):e.parsed.x}`}}},scales:{x:{ticks:{color:"var(--secondary-text-color)"},grid:{color:"var(--card-border-color)"}},y:{ticks:{color:"var(--secondary-text-color)",autoSkip:!1},grid:{display:!1}}}}})}
-function renderScatterPlot(){let e=getFilteredData();if(!e.length)return void(scatterPlotChart&&scatterPlotChart.destroy());const t=e.map((e=>({x:e.scores.price,y:e.scores.sound_score,label:e.name,id:e.id})));scatterPlotChart&&scatterPlotChart.destroy(),scatterPlotChart=new Chart(scatterPlotCanvas,{type:"scatter",data:{datasets:[{label:"Price vs. Sound",data:t,backgroundColor:"rgba(0, 123, 255, 0.7)"}]},options:{responsive:!0,maintainAspectRatio:!1,onClick:(e=>{const t=scatterPlotChart.getElementsAtEventForMode(e,"nearest",{intersect:!0},!0);t.length&&openQuickViewModal(plotData[t[0].index].id)}),onHover:((e,t)=>{e.native.target.style.cursor=t[0]?"pointer":"default"}),plugins:{legend:{display:!1},tooltip:{callbacks:{label:e=>`${e.raw.label} ($${e.raw.x}, Score: ${e.raw.y})`}}},scales:{x:{title:{display:!0,text:"Price (USD)",color:"var(--primary-text-color)"},ticks:{color:"var(--secondary-text-color)"},grid:{color:"var(--card-border-color)"}},y:{title:{display:!0,text:"Sound Score",color:"var(--primary-text-color)"},ticks:{color:"var(--secondary-text-color)"},grid:{color:"var(--card-border-color)"}}}}})}
-function renderDataTable(e=""){let t=getFilteredData();e&&(t=t.filter((t=>t.name.toLowerCase().includes(e.toLowerCase())))),fullDataTableHead.innerHTML="<tr><th>Name</th><th>Type</th><th>ANC</th><th>Sound</th><th>Water Res.</th><th>Price (USD)</th></tr>",fullDataTableBody.innerHTML=t.map((e=>`<tr data-product-id="${e.id}" style="cursor: pointer;"><td>${e.name}</td><td>${e.type}</td><td>${e.specs["Noise Cancellation"]}</td><td>${e.specs.Sound}</td><td>${e.specs["Water Resistance"]}</td><td>$${e.scores.price}</td></tr>`)).join("")}
+// --- DATA FILTERING & MODALS ---
+function getFilteredData() { return currentFilter === 'all' ? [...allProducts] : allProducts.filter(p => p.type === currentFilter); }
+function openModal(index) { activeSlotIndex = index; populateModalList(); addProductModal.classList.add('active'); }
+function closeModal() { addProductModal.classList.remove('active'); }
+
+function openQuickViewModal(productId) {
+    const product = allProducts.find(p => p.id === productId);
+    if (!product) return;
+    quickViewContent.innerHTML = `
+        <button id="close-quick-view" class="close-button">&times;</button>
+        <div class="product-header"><img src="${product.image}" alt="${product.name}"><h2>${product.name}</h2></div>
+        <ul class="spec-list">${Object.entries(product.specs).map(([k, v]) => `<li><span class="spec-label">${k}</span> <span>${v}</span></li>`).join('')}</ul>
+        <div class="price-list">${createPriceListHTML(product)}</div>
+        <button class="add-to-compare-btn" data-product-id="${product.id}">+ Add to Compare</button>`;
+    quickViewModal.classList.add('active');
+    D.getElementById('close-quick-view').addEventListener('click', closeQuickViewModal);
+    D.querySelector('.add-to-compare-btn').addEventListener('click', (e) => {
+        const id = parseInt(e.target.dataset.productId);
+        const emptySlotIndex = selectedProducts.findIndex(p => p === null);
+        selectProduct(id, emptySlotIndex !== -1 ? emptySlotIndex : selectedProducts.length);
+        closeQuickViewModal();
+    });
+}
+function closeQuickViewModal() { quickViewModal.classList.remove('active'); }
+
+// --- DYNAMIC COMPARISON ---
+function renderGridAndComparisonTable() {
+    comparisonGrid.innerHTML = '';
+    selectedProducts.forEach((p, i) => comparisonGrid.innerHTML += p ? createProductCardHTML(p, i) : createPlaceholderCardHTML(i));
+    if (selectedProducts[selectedProducts.length - 1] !== null) {
+        comparisonGrid.innerHTML += createPlaceholderCardHTML(selectedProducts.length);
+    }
+    addEventListenersToCards();
+    renderDirectComparisonTable();
+}
+
+function selectProduct(productId, slotIndex) {
+    const product = allProducts.find(p => p.id === parseInt(productId));
+    if (slotIndex >= selectedProducts.length) selectedProducts.push(product);
+    else selectedProducts[slotIndex] = product;
+    closeModal();
+    renderGridAndComparisonTable();
+}
+
+function removeProduct(index) {
+    selectedProducts.splice(index, 1);
+    if (selectedProducts.length < 2) selectedProducts.push(null);
+    renderGridAndComparisonTable();
+}
+
+// --- TABLES & CHARTS RENDERING ---
+function renderDirectComparisonTable() {
+    const currentlyCompared = selectedProducts.filter(p => p !== null);
+    if (currentlyCompared.length === 0) { directComparisonContainer.style.display = 'none'; return; }
+    directComparisonContainer.style.display = 'block';
+    const allSpecKeys = ['Price', ...Object.keys(currentlyCompared[0].specs)];
+    let tableHTML = '<thead><tr><th>Feature</th>';
+    currentlyCompared.forEach(p => tableHTML += `<th><img src="${p.image}" class="product-image" alt="${p.name}"><br>${p.name}</th>`);
+    tableHTML += '</tr></thead><tbody>';
+    allSpecKeys.forEach(key => {
+        tableHTML += `<tr><td><strong>${key}</strong></td>`;
+        currentlyCompared.forEach(p => {
+            let value = (key === 'Price') ? `${(p.regionalPrices[userRegion] || p.regionalPrices['US'])[0].currency}${(p.regionalPrices[userRegion] || p.regionalPrices['US'])[0].price}` : p.specs[key] || 'N/A';
+            tableHTML += `<td>${value}</td>`;
+        });
+        tableHTML += '</tr>';
+    });
+    directComparisonTable.innerHTML = tableHTML + '</tbody>';
+}
+
+function renderOrUpdateChart() {
+    let dataToDisplay = getFilteredData();
+    if (!dataToDisplay.length) { if (comparisonChart) comparisonChart.destroy(); return; }
+    const category = chartCategorySelector.value, isPrice = category === 'price';
+    dataToDisplay.sort((a, b) => isPrice ? a.scores[category] - b.scores[category] : b.scores[category] - a.scores[category]);
+    if (comparisonChart) comparisonChart.destroy();
+    D.querySelector("#comparisonChart").parentElement.style.height = `${dataToDisplay.length * 28}px`;
+    comparisonChart = new Chart(barChartCanvas, {
+        type: 'bar',
+        data: { labels: dataToDisplay.map(p => p.name), datasets: [{ label: chartCategorySelector.options[chartCategorySelector.selectedIndex].text, data: dataToDisplay.map(p => p.scores[category]), backgroundColor: 'rgba(0, 123, 255, 0.6)', borderColor: 'rgba(0, 123, 255, 1)', borderWidth: 1 }] },
+        options: {
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+            onClick: (e) => {
+                const points = comparisonChart.getElementsAtEventForMode(e, 'nearest', { intersect: true }, true);
+                if (points.length) {
+                    const product = dataToDisplay[points[0].index];
+                    openQuickViewModal(product.id);
+                }
+            },
+            onHover: (e, el) => { e.native.target.style.cursor = el[0] ? 'pointer' : 'default'; },
+            plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => ` ${c.dataset.label || ''}: ${isPrice ? new Intl.NumberFormat('en-US',{style:'currency', currency:'USD'}).format(c.parsed.x) : c.parsed.x}` } } },
+            scales: { x: { ticks: { color: 'var(--secondary-text-color)' }, grid: { color: 'var(--card-border-color)' } }, y: { ticks: { color: 'var(--secondary-text-color)', autoSkip: false }, grid: { display: false } } }
+        }
+    });
+}
+
+function renderScatterPlot() {
+    let dataToDisplay = getFilteredData();
+    if (!dataToDisplay.length) { if (scatterPlotChart) scatterPlotChart.destroy(); return; }
+    const plotData = dataToDisplay.map(p => ({ x: p.scores.price, y: p.scores.sound_score, label: p.name, id: p.id }));
+    if (scatterPlotChart) scatterPlotChart.destroy();
+    scatterPlotChart = new Chart(scatterPlotCanvas, {
+        type: 'scatter', data: { datasets: [{ label: 'Price vs. Sound', data: plotData, backgroundColor: 'rgba(0, 123, 255, 0.7)' }] },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            onClick: (e) => {
+                const points = scatterPlotChart.getElementsAtEventForMode(e, 'nearest', { intersect: true }, true);
+                if (points.length) {
+                    const product = plotData[points[0].index];
+                    openQuickViewModal(product.id);
+                }
+            },
+            onHover: (e, el) => { e.native.target.style.cursor = el[0] ? 'pointer' : 'default'; },
+            plugins: { legend: { display: false }, tooltip: { callbacks: { label: (c) => `${c.raw.label} ($${c.raw.x}, Score: ${c.raw.y})` } } },
+            scales: {
+                x: { title: { display: true, text: 'Price (USD)', color: 'var(--primary-text-color)' }, ticks: { color: 'var(--secondary-text-color)' }, grid: { color: 'var(--card-border-color)' } },
+                y: { title: { display: true, text: 'Sound Score', color: 'var(--primary-text-color)' }, ticks: { color: 'var(--secondary-text-color)' }, grid: { color: 'var(--card-border-color)' } }
+            }
+        }
+    });
+}
+
+function renderDataTable(searchTerm = '') {
+    let dataToDisplay = getFilteredData();
+    if (searchTerm) dataToDisplay = dataToDisplay.filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    fullDataTableHead.innerHTML = `<tr><th>Name</th><th>Type</th><th>ANC</th><th>Sound</th><th>Water Res.</th><th>Price (USD)</th></tr>`;
+    fullDataTableBody.innerHTML = dataToDisplay.map(p => `<tr data-product-id="${p.id}" style="cursor: pointer;"><td>${p.name}</td><td>${p.type}</td><td>${p.specs['Noise Cancellation']}</td><td>${p.specs.Sound}</td><td>${p.specs['Water Resistance']}</td><td>$${p.scores.price}</td></tr>`).join('');
+}
+
+// --- CORE HELPER FUNCTIONS (UNCHANGED) ---
 async function getUserRegion(){try{const e=await fetch("https://ip-api.com/json/?fields=countryCode");return(await e.json()).countryCode||"US"}catch(e){return console.warn("Could not auto-detect region. Defaulting to 'US'."),"US"}}
-function updateLanguage(){const e=translations[userLanguage]||translations.en;D.querySelectorAll("[data-lang]").forEach((t=>{const n=t.getAttribute("data-lang");e[n]&&(t.textContent=e[n])}))}
-function createPriceListHTML(e){const t=e.regionalPrices[userRegion]||e.regionalPrices.US;return t?t.map((e=>`<div class="price-item"><span>${e.store}: <strong>${e.currency}${e.price}</strong></span><a href="${e.link}" target="_blank" class="buy-button">Buy</a></div>`)).join(""):"<p>No pricing available.</p>"}
+function updateLanguage(){const e=translations[userLanguage]||translations.en;D.querySelectorAll("[data-lang]").forEach(t=>{const n=t.getAttribute("data-lang");e[n]&&(t.textContent=e[n])})}
+function createPriceListHTML(e){const t=e.regionalPrices[userRegion]||e.regionalPrices.US;return t?t.map(e=>`<div class="price-item"><span>${e.store}: <strong>${e.currency}${e.price}</strong></span><a href="${e.link}" target="_blank" class="buy-button">Buy</a></div>`).join(""):"<p>No pricing available.</p>"}
 function createProductCardHTML(e,t){return`<div class="product-card"><div class="product-header"><button class="remove-button" data-index="${t}">&times;</button><img src="${e.image}" alt="${e.name}"><h2>${e.name}</h2></div><ul class="spec-list">${Object.entries(e.specs).map(([e,t])=>`<li><span class="spec-label">${e}</span> <span>${t}</span></li>`).join("")}</ul><div class="price-list">${createPriceListHTML(e)}</div></div>`}
 function loadParticleBackground(){tsParticles.load("particles-js",{fpsLimit:60,interactivity:{events:{onHover:{enable:!0,mode:"repulse"},resize:!0},modes:{repulse:{distance:100,duration:.4}}},particles:{color:{value:D.body.dataset.theme==="dark"?"#555":"#ccc"},links:{color:{value:D.body.dataset.theme==="dark"?"#555":"#ccc"},distance:150,enable:!0,opacity:.2,width:1},collisions:{enable:!0},move:{direction:"none",enable:!0,outMode:"bounce",random:!1,speed:1,straight:!1},number:{density:{enable:!0,area:800},value:80},opacity:{value:.2},shape:{type:"circle"},size:{random:!0,value:3}},detectRetina:!0})};
 function createPlaceholderCardHTML(e){return`<div class="placeholder-card" data-index="${e}"><span class="add-button">+ Compare</span></div>`};
-function addEventListenersToCards(){D.querySelectorAll(".placeholder-card").forEach((e=>{e.addEventListener("click",(()=>openModal(e.dataset.index))})),D.querySelectorAll(".remove-button").forEach((e=>{e.addEventListener("click",(t=>{t.stopPropagation(),removeProduct(t.dataset.index)}))}))}
-function populateModalList(e=""){const t=getFilteredData();productList.innerHTML="";const n=selectedProducts.filter((e=>e)).map((e=>e.id)),o=t.filter((t=>t.name.toLowerCase().includes(e.toLowerCase())));o.forEach((e=>{const t=D.createElement("li"),o=n.includes(e.id);t.innerHTML=`<img src="${e.image}" alt=""> <span>${e.name}</span>`,o?t.classList.add("disabled"):t.addEventListener("click",(()=>selectProduct(e.id,activeSlotIndex))),productList.appendChild(t)}))};
+function addEventListenersToCards(){D.querySelectorAll(".placeholder-card").forEach(e=>{e.addEventListener("click",()=>openModal(e.dataset.index))}),D.querySelectorAll(".remove-button").forEach(e=>{e.addEventListener("click",t=>{t.stopPropagation(),removeProduct(t.dataset.index)})})};
+function populateModalList(e=""){const t=getFilteredData();productList.innerHTML="";const n=selectedProducts.filter(e=>e).map(e=>e.id),o=t.filter(t=>t.name.toLowerCase().includes(e.toLowerCase()));o.forEach(e=>{const t=D.createElement("li"),o=n.includes(e.id);t.innerHTML=`<img src="${e.image}" alt=""> <span>${e.name}</span>`,o?t.classList.add("disabled"):t.addEventListener("click",()=>selectProduct(e.id, activeSlotIndex)),productList.appendChild(t)})};
 
 // --- START THE APP ---
 initializeApp();
