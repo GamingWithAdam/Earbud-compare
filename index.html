@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Audio Comparator</title>
+    <title>The Ultimate Audio Comparator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -12,6 +12,22 @@
 <body>
 
     <div id="particles-js"></div>
+
+    <!-- NEW: One-Time Welcome Modal for Region Selection -->
+    <div id="welcome-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Welcome!</h2>
+            <p>To provide accurate pricing, please confirm your region. We've made a best guess based on your location.</p>
+            <div class="setting-item">
+                <label for="welcome-country-selector">Your Country / Region</label>
+                <select id="welcome-country-selector">
+                    <option value="US">United States</option><option value="GB">United Kingdom</option><option value="DE">Germany</option><option value="CA">Canada</option><option value="AU">Australia</option>
+                </select>
+            </div>
+            <button id="save-region-button" class="modal-button">Save and Continue</button>
+        </div>
+    </div>
+
     <button id="menu-toggle-button" class="menu-toggle">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
     </button>
@@ -19,9 +35,7 @@
         <h3 data-lang="settingsTitle">Settings</h3>
         <div class="setting-item">
             <label for="country-selector" data-lang="countryLabel">Country / Region</label>
-            <select id="country-selector">
-                <option value="US">United States</option><option value="GB">United Kingdom</option><option value="DE">Germany</option><option value="CA">Canada</option><option value="AU">Australia</option>
-            </select>
+            <select id="country-selector"></select> <!-- Populated by JS -->
         </div>
         <div class="setting-item">
             <label for="language-selector" data-lang="languageLabel">Language</label>
@@ -37,19 +51,15 @@
             <p class="subtitle" data-lang="subtitle">Compare specs and prices for earbuds and headphones.</p>
         </header>
 
-        <!-- NEW: Product Type Filter Bar -->
         <div class="filter-container">
             <div class="filter-group">
-                <input type="radio" id="filter-all" name="product-type" value="all" checked>
-                <label for="filter-all">All</label>
+                <input type="radio" id="filter-all" name="product-type" value="all" checked><label for="filter-all">All</label>
             </div>
             <div class="filter-group">
-                <input type="radio" id="filter-earbuds" name="product-type" value="earbud">
-                <label for="filter-earbuds">Earbuds</label>
+                <input type="radio" id="filter-earbuds" name="product-type" value="earbud"><label for="filter-earbuds">Earbuds</label>
             </div>
             <div class="filter-group">
-                <input type="radio" id="filter-headphones" name="product-type" value="headphone">
-                <label for="filter-headphones">Headphones</label>
+                <input type="radio" id="filter-headphones" name="product-type" value="headphone"><label for="filter-headphones">Headphones</label>
             </div>
         </div>
 
@@ -61,19 +71,34 @@
                 <div class="chart-selector-wrapper">
                     <label for="chart-category-selector">Compare by:</label>
                     <select id="chart-category-selector">
-                        <option value="price">Price (USD)</option>
-                        <option value="anc_score">Noise Cancellation</option>
-                        <option value="sound_score">Sound Quality</option>
-                        <option value="ip_rating">Water Resistance (IPX rating)</option>
-                        <option value="app_score">App Support</option>
+                        <option value="price">Price (USD)</option><option value="anc_score">Noise Cancellation</option><option value="sound_score">Sound Quality</option><option value="ip_rating">Water Resistance (IPX rating)</option><option value="app_score">App Support</option>
                     </select>
                 </div>
             </div>
-            <div class="chart-canvas-container">
-                <canvas id="comparisonChart"></canvas>
+            <div class="chart-canvas-container"><canvas id="comparisonChart"></canvas></div>
+        </section>
+
+        <!-- NEW: Value for Money Scatter Plot -->
+        <section class="chart-container">
+            <div class="chart-header">
+                <h2>Value for Money</h2>
+                <p>Comparing Price vs. Sound Quality Score</p>
             </div>
+            <div class="chart-canvas-container scatter-plot-container"><canvas id="scatterPlotChart"></canvas></div>
         </section>
         
+        <!-- NEW: Full Data Table -->
+        <section class="table-container">
+            <h2>Full Data Table</h2>
+            <input type="text" id="table-search" placeholder="Search the full database...">
+            <div class="table-wrapper">
+                <table id="full-data-table">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
     </div>
 
     <div id="product-modal" class="modal-overlay">
