@@ -51,6 +51,7 @@ body[data-theme='blueprint'] {
     --card-border-color: #fff;
     --accent-color: #ffc300;
     --accent-hover-color: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.3);
     --particle-color: #fff;
     --particle-link-color: #fff;
 }
@@ -88,7 +89,7 @@ h2 { font-size: 1.8rem; }
 .filter-group input[type="radio"] { position: absolute; opacity: 0; }
 .filter-group label { display: inline-block; padding: 10px 20px; border-radius: 8px; color: var(--secondary-text-color); font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
 .filter-group input[type="radio"]:checked + label { background-color: var(--accent-color); color: #fff; }
-.tabs { display: flex; gap: 10px; border-bottom: 2px solid var(--card-border-color); margin-bottom: 2rem; }
+.tabs { display: flex; gap: 10px; border-bottom: 2px solid var(--card-border-color); margin-bottom: 2rem; flex-wrap: wrap; }
 .tab-link { padding: 10px 20px; background: none; border: none; color: var(--secondary-text-color); font-size: 1rem; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent; }
 .tab-link.active { color: var(--primary-text-color); border-bottom-color: var(--accent-color); }
 .tab-content { display: none; }
@@ -118,7 +119,7 @@ h2 { font-size: 1.8rem; }
 /* --- Modal Styles --- */
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); display: none; justify-content: center; align-items: center; z-index: 1000; }
 .modal-overlay.active { display: flex; }
-.modal-content { background: var(--card-bg-color); padding: 30px; border-radius: 12px; border: 1px solid #444; width: 90%; max-width: 500px; max-height: 80vh; display: flex; flex-direction: column; position: relative; box-shadow: 0 10px 50px rgba(0,0,0,0.5); }
+.modal-content { background: var(--card-bg-color); padding: 30px; border-radius: 12px; border: 1px solid var(--card-border-color); width: 90%; max-width: 500px; max-height: 80vh; display: flex; flex-direction: column; position: relative; box-shadow: 0 10px 50px rgba(0,0,0,0.5); }
 .close-button { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 2rem; cursor: pointer; color: #aaa; }
 .modal-content h2 { text-align: center; margin-bottom: 1rem; }
 .modal-content p { color: var(--secondary-text-color); text-align: center; margin-bottom: 1.5rem; }
@@ -153,3 +154,11 @@ h2 { font-size: 1.8rem; }
 #full-data-table th, #direct-comparison-table th { background-color: var(--card-bg-color); cursor: pointer; position: sticky; top: 0; }
 #full-data-table tbody tr:hover, #direct-comparison-table tbody tr:hover { background-color: rgba(128, 128, 128, 0.05); }
 #direct-comparison-table .product-image { width: 60px; height: 60px; object-fit: contain; }
+
+/* --- Quick View Modal Specific Styles --- */
+.quick-view-content { max-width: 400px; }
+.quick-view-content .product-header img { max-width: 150px; height: 150px; }
+.quick-view-content .spec-list { margin: 1rem 0; }
+.quick-view-content .price-list { margin-top: 1rem; }
+.add-to-compare-btn { width: 100%; padding: 14px; font-size: 1rem; background-color: rgba(128, 128, 128, 0.2); border: 1px solid var(--card-border-color); color: var(--primary-text-color); border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 1.5rem; transition: background-color 0.3s; }
+.add-to-compare-btn:hover { background-color: var(--accent-color); color: #fff; }
