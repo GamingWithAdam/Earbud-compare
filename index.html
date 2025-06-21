@@ -6,7 +6,7 @@
     <title>The Ultimate Audio Comparator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=VT323&family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark"> <!-- Default theme -->
@@ -29,7 +29,17 @@
         <h3 data-lang="settingsTitle">Settings</h3>
         <div class="setting-item"><label for="country-selector" data-lang="countryLabel">Country / Region</label><select id="country-selector"></select></div>
         <div class="setting-item"><label for="language-selector" data-lang="languageLabel">Language</label><select id="language-selector"><option value="en">English</option><option value="de">Deutsch</option></select></div>
-        <div class="setting-item"><label for="theme-selector">Theme</label><select id="theme-selector"><option value="system">System</option><option value="dark">Dark</option><option value="light">Light</option></select></div>
+        <!-- NEW THEMES ADDED TO DROPDOWN -->
+        <div class="setting-item"><label for="theme-selector">Theme</label>
+            <select id="theme-selector">
+                <option value="system">System</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="terminal">Retro Terminal</option>
+                <option value="blueprint">Blueprint</option>
+                <option value="vaporwave">Vaporwave</option>
+            </select>
+        </div>
     </nav>
 
     <div class="content-wrapper">
@@ -44,7 +54,6 @@
             <div class="filter-group"><input type="radio" id="filter-headphones" name="product-type" value="headphone"><label for="filter-headphones">Headphones</label></div>
         </div>
 
-        <!-- NEW: Tab Navigation -->
         <div class="tabs">
             <button class="tab-link active" data-tab="tab-direct-compare">Direct Comparison</button>
             <button class="tab-link" data-tab="tab-market-chart">Market Chart</button>
@@ -52,7 +61,6 @@
             <button class="tab-link" data-tab="tab-data-table">Full Table</button>
         </div>
 
-        <!-- Tab Content -->
         <div id="tab-direct-compare" class="tab-content active">
             <h2>Select Products to Compare</h2>
             <div id="comparison-grid" class="comparison-grid"></div>
