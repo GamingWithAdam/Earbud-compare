@@ -9,14 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=VT323&family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="dark">
+<body data-theme="dark"> <!-- Default theme -->
 
     <div id="particles-js"></div>
 
     <div id="welcome-modal" class="modal-overlay">
         <div class="modal-content">
             <h2>Welcome!</h2>
-            <p>To provide accurate pricing, please confirm your region.</p>
+            <p>To provide accurate pricing, please confirm your region. We've made a best guess based on your location.</p>
             <div class="setting-item"><label for="welcome-country-selector">Your Country / Region</label><select id="welcome-country-selector"></select></div>
             <button id="save-region-button" class="modal-button">Save and Continue</button>
         </div>
@@ -28,10 +28,23 @@
     <nav id="settings-menu" class="settings-menu">
         <h3 data-lang="settingsTitle">Settings</h3>
         <div class="setting-item"><label for="country-selector" data-lang="countryLabel">Country / Region</label><select id="country-selector"></select></div>
-        <div class="setting-item"><label for="language-selector" data-lang="languageLabel">Language</label><select id="language-selector"><option value="en">English</option><option value="de">Deutsch</option></select></div>
+        <div class="setting-item"><label for="language-selector" data-lang="languageLabel">Language</label>
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
         <div class="setting-item"><label for="theme-selector">Theme</label>
             <select id="theme-selector">
-                <option value="system">System</option><option value="dark">Dark</option><option value="light">Light</option><option value="terminal">Retro Terminal</option><option value="blueprint">Blueprint</option><option value="vaporwave">Vaporwave</option>
+                <option value="system">System</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="terminal">Retro Terminal</option>
+                <option value="blueprint">Blueprint</option>
+                <option value="vaporwave">Vaporwave</option>
             </select>
         </div>
     </nav>
@@ -93,7 +106,6 @@
         </div>
     </div>
 
-    <!-- This is the original modal for adding products to the comparison grid -->
     <div id="add-product-modal" class="modal-overlay">
         <div class="modal-content">
             <button id="close-add-modal" class="close-button">&times;</button>
@@ -103,7 +115,6 @@
         </div>
     </div>
 
-    <!-- NEW: Quick View Modal for viewing single product details -->
     <div id="quick-view-modal" class="modal-overlay">
         <div id="quick-view-content" class="modal-content quick-view-content">
             <!-- Content will be injected by JavaScript -->
